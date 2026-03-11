@@ -1,0 +1,158 @@
+{
+  "basics": {
+    "name": "Edinson Rivera Jurado",
+    "label": "Ingeniero de Sistemas con intereses en desarrollo web y marketing digital con +5 años de experiencia & Creador de Contenido de Programación.",
+    "image": "/metoo.webp",
+    "email": "edirju@gmail.com",
+    "phone": "+57 3128288647",
+    "url": "https://edinson-rivera-devweb.vercel.app/",
+    "summary": "+5 años de experiencia como Desarrollador Web | Community Manager. Actualmente soy freelance & creador de Contenido sobre Programación. Vivo en Cali, Colombia. He trabajado en diferentes entornos: desde desarrollador hasta gestionar redes sociales de empresas multinacionales.",
+    "location": {
+      "address": "",
+      "postalCode": "760023",
+      "city": "Santiago de Cali",
+      "countryCode": "CO",
+      "region": "Colombia"
+    },
+    "profiles": [
+      {
+        "network": "Linkedin",
+        "username": "Edinson Rivera Jurado",
+        "url": "https://www.linkedin.com/in/edinson-rivera-jurado/"
+      },
+      {
+        "network": "Github",
+        "username": "Edirju | Edinson Rivera",
+        "url": "https://github.com/Edirju"
+      },
+      {
+        "network": "Bluesky",
+        "username": "Edirju | Edinson Rivera",
+        "url": "https://bsky.app/profile/edinsonrivera.bsky.social"
+      },
+      {
+        "network": "Instagram",
+        "username": "Edirju | Edinson Rivera",
+        "url": "https://www.instagram.com/edirju/"
+      },
+      {
+        "network": "Threads",
+        "username": "Edirju | Edinson Rivera",
+        "url": "https://www.threads.net/@edirju"
+      }
+    ]
+  },
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "Headings": [
+    "¿Qué es lo que esta pasando aquí?",
+    "What can I help you build?",
+    "No soy una maquina, ni soy automatico",
+    "Social Media, desarrollo Web + opinión"
+  ],
+  "skills": [
+    {
+      "name": "html",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Html5"
+    },
+    {
+      "name": "css",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Css3"
+    },
+    {
+      "name": "javascript",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Javascript"
+    },
+    {
+      "name": "Astro",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Astrojs"
+    },
+    {
+      "name": "react",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "React"
+    },
+    {
+      "name": "nodejs",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Nodejs"
+    },
+    {
+      "name": "tailwind",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Tailwindcss"
+    },
+    {
+      "name": "gemini",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Geminiai"
+    },
+    {
+      "name": "figma",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Figma"
+    },
+    {
+      "name": "chatgpt",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "ChatGpt"
+    },
+    {
+      "name": "notion",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Notion"
+    },
+    {
+      "name": "trello",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Trello"
+    },
+    {
+      "name": "desarrollo web",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Tools"
+    },
+    {
+      "name": "github",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Github"
+    },
+    {
+      "name": "gestión de redes sociales",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Brain"
+    },
+    {
+      "name": "analytics",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "Backend"],
+      "icon": "Analytics"
+    }
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "basics": {
+    "name": "Edinson Rivera Jurado",
+    "label": "Ingeniero de Sistemas con intereses en desarrollo web y marketing digital con +5 años de experiencia & Creador de Contenido de Programación.",
+    "image": "/me.webp",
+    "email": "edirju@gmail.com",
+    "phone": "+57 3128288647",
+    "url": "https://untaledinson.pages.dev/",
+    "summary": "+5 años de experiencia como Desarrollador Web y Community manager. Ingeniero de Sistemas de la Universidad INCCA de Colombia con intereses en el sector de IT, desarrollo web/software y marketing  digital, con experiencia en aplicaciones informáticas, asesorías  tecnológicas para analizar, diseñar, comprobar y evaluar sistemas de información, troubleshooting presencial y remoto. Actualmente soy freelance - creador de contenido. Vivo en Cali, Colombia. He trabajado en diferentes entornos: desde diseñador web hasta gestor de redes sociales en equipos de empresas multinacionales.",
+    "location": {
+      "address": "",
+      "postalCode": "760023",
+      "city": "Santiago de Cali",
+      "countryCode": "CO",
+      "region": "Colombia"
+    },
+    "profiles": [
+      {
+        "network": "Linkedin",
+        "username": "Edinson",
+        "url": "https://www.linkedin.com/in/edinson-rivera-jurado-65187927/"
+      },
+      {
+        "network": "Github",
+        "username": "Edirju",
+        "url": "https://github.com/Edirju"
+      },
+      {
+        "network": "X",
+        "username": "edinson_rivera",
+        "url": "https://twitter.com/edinson_rivera"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelancer",
+      "position": "Diseño Web & Gestión de Redes Sociales",
+      "url": "#",
+      "startDate": "2022-03-08",
+      "endDate": null,
+      "summary": "Desarrollo de web estáticas y aplicaciones, adicionalmente en tareas de gestión de redes sociales para marcas personales y comerciales.",
+      "highlights": ["Desarrollo de web estáticas y aplicaciones", "Gestión de redes sociales"]
+    },
+    {
+      "name": "Telecenter Panamericana",
+      "position": "Ejecutivo de Social Media",
+      "url": "#",
+      "startDate": "2016-06-01",
+      "endDate": "2022-03-08",
+      "summary": "Comunicación escrita a usuarios que interactúan en redes sociales de DIRECTV LATAM. Verificación de comentarios en las redes sociales y creación de interacciones para su oportuna gestión. Escalamiento de requerimientos a sectores encargados vía mail. Apertura de atención a usuarios en redes sociales de DIRECTV LATAM / DIRECTV GO, mejorando sustancialmente tiempos de respuesta y manejo de crisis, posicionamiento de productos digitales.",
+      "highlights": ["Comunicación escrita a usuarios", "Verificación de comentarios en las redes sociales", "Creación de interacciones para su oportuna gestión", "Escalamiento de requerimientos a sectores encargados vía mail", "Apertura de atención a usuarios en redes sociales de DIRECTV LATAM / DIRECTV GO", "Mejorando sustancialmente tiempos de respuesta y manejo de crisis", "Posicionamiento de productos digitales"]
+    },
+    {
+      "name": "Telecenter Panamericana",
+      "position": "Ejecutivo de Servicio DIRECTV",
+      "startDate": "2012-12-03",
+      "endDate": "2016-06-01",
+      "summary": "Comunicación telefónica a usuarios que interactúan por soporte técnico. Monitoreo de las necesidades del suscriptor. Verificación remota y toma de evidencias. Cierre efectivo de la gestión o escalamiento a niveles superiores de soporte.",
+      "highlights": ["Comunicacion telefónica a usuarios", "Monitoreo de las necesidades del suscriptor", "Verificación remota y toma de evidencias", "Cierre efectivo de la gestión o escalamiento a niveles superiores de soporte"]
+    },
+    {
+      "name": "CEDIMA IPS",
+      "position": "Asistente Administrativo",
+      "startDate": "2005-08-03",
+      "endDate": "2008-03-01",
+      "summary": "Comunicación telefónica a usuarios que interactúan por soporte técnico. Monitoreo de las necesidades del suscriptor. Verificación remota y toma de evidencias. Cierre efectivo de la gestión o escalamiento a niveles superiores de soporte.",
+      "highlights": ["Comunicacion telefónica a usuarios", "Monitoreo de las necesidades del suscriptor", "Verificación remota y toma de evidencias", "Cierre efectivo de la gestión o escalamiento a niveles superiores de soporte"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad INCCA de Colombia",
+      "url": "https://unincca.edu.co/",
+      "area": "Ingeniero de Sistemas",
+      "studyType": "Profesional",
+      "startDate": "2001-01-01",
+      "endDate": "2006-01-01",
+      "score": "4.0",
+      "courses": ["Ingeniería de Sistemas - Gestion de proyectos"]
+    },
+    {
+      "institution": "Fundación Centro Colombiano de Estudios Profesionales",
+      "url": "https://www.cecep.edu.co/",
+      "area": "Tecnología de Sistemas",
+      "studyType": "Tecnólogo",
+      "startDate": "2001-01-01",
+      "endDate": "2006-01-01",
+      "score": "4.0",
+      "courses": ["Tecnología de Sistemas de información"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "JavaScript Algorithms and Data Structures (Beta)",
+      "date": "2024-03-01",
+      "issuer": "freeCodeCamp",
+      "url": "https://freecodecamp.org/certification/fcc65dd77ca-8051-4190-adf4-11013a92472a/javascript-algorithms-and-data-structures-v8"
+    },
+    {
+      "name": "Taller de Creación de Contenido con Inteligencia Artificial",
+      "date": "2023-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/6176-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Storytelling",
+      "date": "2022-07-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2240-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Manejo de Crisis en Redes Sociales",
+      "date": "2022-05-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1714-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Marketing con YouTube",
+      "date": "2022-05-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1714-course/diploma/detalle/"
+    },
+    {
+      "name": "Desarrollo de Apps Móviles",
+      "date": "2022-05-01",
+      "issuer": "Universidad Complutense de Madrid",
+      "url": "https://learndigital.withgoogle.com/link/1nur091p2ww"
+    },
+    {
+      "name": "Cloud Computing",
+      "date": "2022-04-01",
+      "issuer": "Google",
+      "url": "https://learndigital.withgoogle.com/link/1nur091p2ww"
+    },
+    {
+      "name": "Curso Definitivo de HTML y CSS",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2008-html-css/diploma/detalle/"
+    },
+    {
+      "name": "Curso Profesional de CSS Grid Layout",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2222-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Content Marketing Avanzado",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/course/1664-content-marketing/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Diseño Web con CSS Grid y Flexbox",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/course/2229-flexbox-css-grid/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Sistemas de Diseño",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/course/1420-sistemas-diseno/diploma/detalle/"
+    },
+    {
+      "name": "Diseño para Developers",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1906-diseno-programadores/diploma/detalle/"
+    },
+    {
+      "name": "Responsive Design: Maquetación Mobile First",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2030-mobile-first/diploma/detalle/"
+    },
+    {
+      "name": "Avanzado de Escritura Creativa",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2782-escritura-avanzada/diploma/detalle/"
+    },
+    {
+      "name": "Curso Básico de JavaScript",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1814-basico-javascript/diploma/detalle/"
+    },
+    {
+      "name": "Curso Profesional de Git y GitHub",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1557-git-github/diploma/detalle/"
+    },
+    {
+      "name": "Curso Práctico de Frontend Developer",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2477-frontend-developer-practico/diploma/detalle/"
+    },
+    {
+      "name": "Curso Práctico de JavaScript",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2327-javascript-practico/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Flujo de Desarrollo Moderno CodeStream",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2157-desarrollo-moderno-codestream/diploma/detalle/"
+    },
+    {
+      "name": "Frontend Developer",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2467-frontend-developer/diploma/detalle/"
+    },
+    {
+      "name": "Algoritmos y Pensamiento Lógico",
+      "date": "2022-02-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2218-pensamiento-logico/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Estrategias de Interacción para Redes Sociales",
+      "date": "2022-02-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2407-interaccion-redes-sociales/diploma/detalle/"
+    },
+    {
+      "name": "Fundamentos de Ingeniería de Software",
+      "date": "2022-02-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1098-ingenieria/diploma/detalle/"
+    },
+    {
+      "name": "Atención al Cliente y Soporte a Usuarios",
+      "date": "2022-01-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1282-atencion-cliente/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Brand Storytelling",
+      "date": "2022-01-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2515-brand-storytelling/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Copywriting para Plataformas Digitales",
+      "date": "2022-01-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1476-copywriting-digital/diploma/detalle/"
+    },
+    {
+      "name": "Community Manager",
+      "date": "2021-12-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1302-community-manager/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Content Marketing",
+      "date": "2021-12-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1666-contenido/diploma/detalle/"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "Css3",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "Javascript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwindcss",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "Typescript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "Mysql",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "Github",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Python",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Bootstrap",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Astrojs",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Vite",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Figma",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Slack",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Notion",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Hubspot",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Gumroad",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Googleads",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Googlegemini",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Googleanalytics",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Openai",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Meta",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Spotify Clone",
+      "isActive": true,
+      "description": "Clone en HTML, CSS y JS con función básica de reproducción de audio.",
+      "highlights": ["Astrojs", "Svelte", "React", "Tailwindcss"],
+      "url": "https://spotify-clone-project-beta.vercel.app/",
+      "github": "https://github.com/Edirju/spotify-clone"
+    },
+    {
+      "name": "Reproductor de Música",
+      "isActive": true,
+      "description": "Aplicación simple que permite la reproduccion de audios.",
+      "highlights": ["Html5", "Css3", "Javascript"],
+      "url": "https://basic-music-player-app.netlify.app/",
+      "github": "https://github.com/Edirju/musisc_player"
+    },
+    {
+      "name": "The TODO List App",
+      "description": "Aplicacion que permite listar tareas pendientes",
+      "highlights": ["Html5", "Css3", "Javascript"],
+      "url": "https://todolist-javascript-app.netlify.app/",
+      "github": "https://github.com/Edirju/toDo_app"
+    },
+    {
+      "name": "Web de Esland Clone",
+      "isActive": false,
+      "description": "Adaptación de esta web con fines educativos y didácticos.",
+      "highlights": ["Css3", "Html5", "Javascript", "Typescript", "Astro"],
+      "url": "https://web-esland-clone.vercel.app/",
+      "github": "https://github.com/Edirju/esland-clone"
+    },
+    {
+      "name": "Retro Blog",
+      "isActive": false,
+      "description": "Blog con un diseño retro",
+      "highlights": ["Astrojs", "Html5", "Css3", "Javascript"],
+      "url": "https://astro-retro-blog.vercel.app/",
+      "github": "https://github.com/Edirju/astro-retro-blog"
+    },
+    {
+      "name": "Bunny Game con CSS",
+      "isActive": true,
+      "description": "Juego de atrapa conejitos en CSS.",
+      "highlights": ["Html5", "Css3"],
+      "url": "https://bunny-game-incss.netlify.app/",
+      "github": "https://github.com/Edirju/Bunny-Game-inCSS"
+    },
+    {
+      "name": "Calculadora de Edad",
+      "isActive": true,
+      "description": "Aplicación para calcular la edad exacta",
+      "highlights": ["Css3", "Html5", "Javascript"],
+      "url": "https://calculadora-age.netlify.app/",
+      "github": "https://github.com/Edirju/age-calculator-app-main"
+    },
+    {
+      "name": "Web Panel de Productos",
+      "isActive": true,
+      "description": "Panel web para mostrar productos como un sitio web",
+      "highlights": ["Html5", "Css3"],
+      "url": "https://web-basica-productos.netlify.app/",
+      "github": "https://github.com/Edirju/web-basic"
+    },
+    {
+      "name": "Web Portfolio # 1",
+      "isActive": false,
+      "description": "Playground de código HTML, CSS y JavaScript para un portafolio web",
+      "highlights": ["Html5", "Css3", "Javascript", "Jquery"],
+      "url": "https://carpiweb-clone.netlify.app/",
+      "github": "https://github.com/Edirju/web-personal-portafolio"
+    },
+    {
+      "name": "Aplicación de Clima",
+      "isActive": true,
+      "description": "Aplicación que consulta el clima de una ciudad en tiempo real a traves de una api",
+      "highlights": ["React", "Vite", "Javascript", "Postman", "Css3"],
+      "url": "https://the-clima-app.vercel.app/",
+      "github": "https://github.com/Edirju/clima-app"
+    },
+    {
+      "name": "Palindrome App",
+      "description": "App que permite validar palabras o frases si son palíndromos.",
+      "highlights": ["Html5", "Css3", "Javascript"],
+      "url": "https://palindromo-validador.netlify.app/",
+      "github": "https://github.com/Edirju/project_palindrome"
+    },
+    {
+      "name": "SunnySide Agency Web",
+      "description": "Plantilla de una landing de una agencia",
+      "highlights": ["React", "Css3", "Vite", "Javascript", "Html5"],
+      "url": "https://sunnyside-agency-landingpage-cyan.vercel.app/",
+      "github": "https://github.com/Edirju/sunnyside_agency_landingpage"
+    },
+    {
+      "name": "Baby Yoda",
+      "isActive": true,
+      "description": "Dibujo en CSS de un personaje de ficción",
+      "highlights": ["Css3", "Html5"],
+      "url": "https://baby-yoda-ten.vercel.app/",
+      "github": "https://github.com/Edirju/baby-yoda"
+    },
+    {
+      "name": "Piedra, Papel y Tijera",
+      "isActive": true,
+      "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
+      "highlights": ["Html5", "Javascript", "Css3"],
+      "url": "https://piedra-papel-tijera-juego-app.netlify.app/",
+      "github": "https://github.com/Edirju/piedra-papel-o-tijera"
+    },
+    {
+      "name": "Mis Tareas App",
+      "isActive": false,
+      "description": "Aplicación en react para monitorear tareas con funcionalidades de agregar, eliminar, completar, almacenar información.",
+      "highlights": ["React",  "Postman", "Css3", "Javascript", "Html5"],
+      "url": "https://mis-tareas-app-sooty.vercel.app/",
+      "github": "https://github.com/Edirju/react-todo-app",
+      "skill": "React"
+    },
+    {
+      "name": "Pókedex Api App",
+      "description": "Playground de código HTML, CSS y JavaScript para una API de Pókedex",
+      "highlights": ["Javascript", "Html5", "Css3"],
+      "url": "https://pokedex-cool-database.netlify.app/",
+      "github": "https://github.com/Edirju/pokedex_api"
+    },
+    {
+      "name": "Binary converter App",
+      "description": "Aplicación que permite convertir números decimales en binarios",
+      "highlights": ["Html5", "Css3", "Javascript"],
+      "url": "https://convertidor-decimal-a-binario.netlify.app/",
+      "github": "https://github.com/Edirju/binary-converter"
+    },
+    {
+      "name": "Busca Películas App",
+      "description": "Aplicacion que permite la busqueda de peliculas a traves del uso de una Api.",
+      "highlights": ["React", "Tailwindcss", "Vite", "JavaScript", "Postman"],
+      "url": "https://app-busca-peliculas.vercel.app/",
+      "github": "https://github.com/Edirju/app-busca-peliculas"
+    },
+    {
+      "name": "Lista de Tareas ",
+      "description": "Aplicacion de listas de tareas pendientes ('Todos').",
+      "highlights": ["React", "Css3", "Vite", "Javascript", "Html5"],
+      "url": "https://to-do-app-vite-theta.vercel.app/",
+      "github": "https://github.com/Edirju/to-do-app",
+      "skill": "Vite"
+    },
+    {
+      "name": "Shopping Cart Simple App",
+      "description": "Proyecto de un carrito de compras, donde se trabaja con apis.",
+      "highlights": ["React", "Css3", "Postman", "Html5", "Javascript"],
+      "url": "https://proyecto-carrito-compras-simple.vercel.app/",
+      "github": "https://github.com/Edirju/proyecto-carrito-compras",
+      "skill": "React"
+    }
+  ]
+}
