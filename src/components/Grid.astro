@@ -1,0 +1,25 @@
+---
+const { title } = Astro.props;
+---
+
+<section
+  class="max-w-175 w-full mx-auto flex flex-col gap-8 px-4 mt-0 mb-9 sm:mb-16 sm:px-0"
+>
+  {
+    title && (
+      <h2 class="font-semibold text-xl tracking-tight not-italic mb-1">
+        {title}
+      </h2>
+    )
+  }
+  <slot name="hero" />
+  <div
+    class="grid grid-cols-[minmax(0,1fr)] gap-8 md:grid-cols-[minmax(0,1fr)_auto]"
+  >
+    <slot />
+    <aside class="flex flex-col gap-8 md:pl-0 md:max-w-3xs">
+      <slot name="aside" />
+    </aside>
+  </div>
+  <slot name="footer" />
+</section>

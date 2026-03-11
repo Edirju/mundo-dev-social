@@ -6,160 +6,274 @@
 @import '@fontsource-variable/inconsolata';
 
 
-
-/*
---font-inter: 'Inter Variable', sans-serif;
---font-inter-tight: 'Inter Tight Variable', sans-serif;
---font-inconsolata: 'Inconsolata Variable', monospace;
-
-*/
-
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	/* Fonts */
+	--font-inter-tight: "Inter Tight Variable", sans-serif;
+	--font-inter: "Inter Variable", sans-serif;
+	--font-inconsolata: "Inconsolata Variable", monospace;
+	/* Sizes */
+	--step--2: clamp(.8247rem, .8445rem + -0.022vw, .8395rem);
+	--step--1: clamp(.9444rem, 0.9294rem + 0.0669vw, 1rem);
+	--step-0: clamp(1.0625rem, 1.0208rem + 0.1852vw, 1.1875rem);
+	--step-1: clamp(1.1953rem, 1.1188rem + 0.3403vw, 1.425rem);
+	--step-2: clamp(1.3447rem, 1.223rem + 0.5411vw, 1.71rem);
+	--step-3: clamp(1.5128rem, 1.3331rem + 0.7988vw, 2.052rem);
+	--step-4: clamp(1.7019rem, 1.4484rem + 1.1266vw, 2.4624rem);
+	--step-5: clamp(1.9147rem, 1.5679rem + 1.5411vw, 2.9549rem);
+	--step-6: clamp(2.154rem, 1.69rem + 2.062vw, 3.5459rem);
+	
+	/* Colors Base */
+	--dark: 30, 37, 44;	/* #1e252c */
+	--light: 255, 254, 254;	/* #fffefe */
+	--accent: 205, 82, 65;	/* #cd5241 */
+	--accent-dark: 98, 35, 26;	/* #62231a */
+	--accent-50: 0, 102, 94;	/* #00665e */
+	--accent-dark-50: 0, 60, 55;	/* #003c37 */
+	--color-text: hsl(210, 19%, 15%);
+	--color: 30, 37, 44;
+
+	--color-primary-50: rgb(238, 241, 245);
+	--color-primary-100: rgb(212, 221, 231);
+	--color-primary-200: rgb(173, 191, 210);
+	--color-primary-300: rgb(140, 164, 189);
+	--color-primary-400: rgb(118, 139, 160);
+	--color-primary-500: rgb(98, 116, 134);
+	--color-primary-600: rgb(79, 94, 109);
+	--color-primary-700: rgb(62, 74, 86);
+	--color-primary-800: rgb(45, 55, 64);
+	--color-primary-900: rgb(30, 37, 44);
+	--color-primary-950: rgb(13, 17, 22);
+
+	--color-secondary-50: rgb(225, 244, 254);
+	--color-secondary-100: rgb(171, 226, 253);
+	--color-secondary-200: rgb(45, 199, 245);
+	--color-secondary-300: rgb(36, 168, 207);
+	--color-secondary-400: rgb(28, 139, 172);
+	--color-secondary-500: rgb(21, 112, 140);
+	--color-secondary-600: rgb(14, 88, 110);
+	--color-secondary-700: rgb(8, 65, 82);
+	--color-secondary-800: rgb(5, 50, 64);
+	--color-secondary-900: rgb(2, 30, 40);
+	--color-secondary-950: rgb(1, 19, 26);
+
+	--color-tertiary-50: rgb(254, 238, 225);
+	--color-tertiary-100: rgb(254, 219, 191);
+	--color-tertiary-200: rgb(253, 190, 122);
+	--color-tertiary-300: rgb(245, 166, 35);
+	--color-tertiary-400: rgb(221, 150, 31);
+	--color-tertiary-500: rgb(189, 127, 24);
+	--color-tertiary-600: rgb(154, 103, 18);
+	--color-tertiary-700: rgb(118, 77, 11);
+	--color-tertiary-800: rgb(81, 52, 5);
+	--color-tertiary-900: rgb(45, 27, 2);
+	--color-tertiary-950: rgb(27, 14, 1);
+	/* Background */
+	--hdr-gradient: linear-gradient(to top in oklch,
+			oklch(0.9378 0.0011 17.18) 0%,
+			oklch(0.9978 0.001061 17.1758) 100%);
+	--sdr-gradient: linear-gradient(to top left, #ebeaea 0%, #fffefe 100%);
+	background: var(--hdr-gradient);
+	/* Various */
+	--gap: 1rem;
 }
-@font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+
+:root.dark {
+	--color-text: #fffefe;
+	--color: 255, 254, 254;
+
+	--color-primary-50: rgb(13, 17, 22);
+	--color-primary-100: rgb(30, 37, 44);
+	--color-primary-200: rgb(45, 55, 64);
+	--color-primary-300: rgb(62, 74, 86);
+	--color-primary-400: rgb(79, 94, 109);
+	--color-primary-500: rgb(98, 116, 134);
+	--color-primary-600: rgb(118, 139, 160);
+	--color-primary-700: rgb(140, 164, 189);
+	--color-primary-800: rgb(173, 191, 210);
+	--color-primary-900: rgb(212, 221, 231);
+	--color-primary-950: rgb(238, 241, 245);
+
+	--color-secondary-50: rgb(1, 19, 26);
+	--color-secondary-100: rgb(2, 30, 40);
+	--color-secondary-200: rgb(5, 50, 64);
+	--color-secondary-300: rgb(8, 65, 82);
+	--color-secondary-400: rgb(14, 88, 110);
+	--color-secondary-500: rgb(21, 112, 140);
+	--color-secondary-600: rgb(28, 139, 172);
+	--color-secondary-700: rgb(36, 168, 207);
+	--color-secondary-800: rgb(45, 199, 245);
+	--color-secondary-900: rgb(171, 226, 253);
+	--color-secondary-950: rgb(225, 244, 254);
+
+	--color-tertiary-50: rgb(27, 14, 1);
+	--color-tertiary-100: rgb(45, 27, 2);
+	--color-tertiary-200: rgb(81, 52, 5);
+	--color-tertiary-300: rgb(118, 77, 11);
+	--color-tertiary-400: rgb(154, 103, 18);
+	--color-tertiary-500: rgb(189, 127, 24);
+	--color-tertiary-600: rgb(221, 150, 31);
+	--color-tertiary-700: rgb(245, 166, 35);
+	--color-tertiary-800: rgb(253, 190, 122);
+	--color-tertiary-900: rgb(254, 219, 191);
+	--color-tertiary-950: rgb(254, 238, 225);
+
+	--hdr-gradient: linear-gradient(to bottom right in oklch,
+			oklch(0.2172 0.0302 261.27) 0%,
+			60%,
+			oklch(0.1913 0 0) 100%);
+	--sdr-gradient: linear-gradient(to bottom right,
+			#121a28 0%,
+			60%,
+			#141414 100%);
+	background: var(--hdr-gradient);
 }
-@font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+
+@theme {
+
+	--color-primary-50: var(--color-primary-50);
+	--color-primary-100: var(--color-primary-100);
+	--color-primary-200: var(--color-primary-200);
+	--color-primary-300: var(--color-primary-300);
+	--color-primary-400: var(--color-primary-400);
+	--color-primary-500: var(--color-primary-500);
+	--color-primary-600: var(--color-primary-600);
+	--color-primary-700: var(--color-primary-700);
+	--color-primary-800: var(--color-primary-800);
+	--color-primary-900: var(--color-primary-900);
+	--color-primary-950: var(--color-primary-950);
+
+	--color-secondary-50: var(--color-secondary-50);
+	--color-secondary-100: var(--color-secondary-100);
+	--color-secondary-200: var(--color-secondary-200);
+	--color-secondary-300: var(--color-secondary-300);
+	--color-secondary-400: var(--color-secondary-400);
+	--color-secondary-500: var(--color-secondary-500);
+	--color-secondary-600: var(--color-secondary-600);
+	--color-secondary-700: var(--color-secondary-700);
+	--color-secondary-800: var(--color-secondary-800);
+	--color-secondary-900: var(--color-secondary-900);
+	--color-secondary-950: var(--color-secondary-950);
+
+	--color-tertiary-50: var(--color-tertiary-50);
+	--color-tertiary-100: var(--color-tertiary-100);
+	--color-tertiary-200: var(--color-tertiary-200);
+	--color-tertiary-300: var(--color-tertiary-300);
+	--color-tertiary-400: var(--color-tertiary-400);
+	--color-tertiary-500: var(--color-tertiary-500);
+	--color-tertiary-600: var(--color-tertiary-600);
+	--color-tertiary-700: var(--color-tertiary-700);
+	--color-tertiary-800: var(--color-tertiary-800);
+	--color-tertiary-900: var(--color-tertiary-900);
+	--color-tertiary-950: var(--color-tertiary-950);
+
+	--font-inter-tight: "Inter Tight Variable", sans-serif;
+	--font-inter: "Inter Variable", sans-serif;
+	--font-inconsolata: "Inconsolata Variable", monospace;
+
+	--text-xs: var(--step--2);
+	--text-sm: var(--step--1);
+	--text-base: var(--step-0);
+	--text-lg: var(--step-1);
+	--text-xl: var(--step-2);
+	--text-2xl: var(--step-3);
+	--text-3xl: var(--step-4);
+	--text-4xl: var(--step-5);
+	--text-5xl: var(--step-6);
+
+	--color-tbase-500: var(--color-text);
+
+	--shadow-sm: 0 1px 2px 0 hsl(from var(--color-primary-500) h s l / 0.05);
+	--shadow-md:
+		0 4px 6px -1px hsl(from var(--color-primary-500) h s l / 0.1),
+		0 2px 4px -1px hsl(from var(--color-primary-500) h s l / 0.06);
+	--shadow-lg:
+		0 10px 15px -3px hsl(from var(--color-primary-500) h s l / 0.1),
+		0 4px 6px -2px hsl(from var(--color-primary-500) h s l / 0.05);
+
+	--radius-4xl: 1.75rem;
+	--radius-3xl: 1.5rem;
+	--radius-2xl: 1.25rem;
+
+	--color-text-color: rgb(var(--color));
+
 }
+
 body {
-	font-family: "Atkinson", sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	font-family: var(--font-inter);
 }
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
+	font-family: var(--font-inter-tight);
 }
-h1 {
-	font-size: 3.052em;
+
+.color-pattern {
+	@apply fixed inset-0 -z-100;
+	background: radial-gradient(ellipse 120% 80% at 70% 20%,
+			hsl(7, 58%, 53%, 0.15),
+			transparent 50%),
+		radial-gradient(ellipse 100% 60% at 30% 10%,
+			hsl(175, 100%, 20%, 0.12),
+			transparent 60%),
+		radial-gradient(ellipse 90% 70% at 50% 0%,
+			hsl(194, 82%, 18%, 0.18),
+			transparent 65%),
+		radial-gradient(ellipse 110% 50% at 80% 30%,
+			hsl(37, 91%, 55%, 0.08),
+			transparent 40%),
+		transparent;
 }
-h2 {
-	font-size: 2.441em;
+
+.bg-pattern {
+	@apply fixed inset-0 -z-80;
+	background-image:
+		linear-gradient(45deg, transparent 49%, rgb(var(--color), 0.05) 49%, rgb(var(--color), 0.05) 51%, transparent 51%), linear-gradient(-45deg, transparent 49%, rgb(var(--color), 0.05) 49%, rgb(var(--color), 0.05) 51%, transparent 51%);
+	background-size: 24px 24px;
+	mask-image:
+		radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
 }
-h3 {
-	font-size: 1.953em;
+
+.print {
+	display: none !important;
 }
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
+
+@media print {
+	.no-print {
+		display: none !important;
 	}
-	main {
-		padding: 1em;
+
+	.print {
+		display: block !important;
+	}
+
+	article {
+		break-inside: avoid;
+	}
+
+	astro-dev-toolbar {
+		display: none !important;
 	}
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+/* Animations */
+@keyframes blinks {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes scroll {
+	to {
+		transform: translateX(calc(-100% - var(--gap)));
+	}
 }
