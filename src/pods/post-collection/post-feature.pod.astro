@@ -1,0 +1,21 @@
+---
+import { getAllPost } from "./post-collection.api";
+import PostCard from "./components/PostCard.astro";
+import News from "#assets/icons/News.astro";
+
+const posts = await getAllPost();
+const postToShow = posts.slice(0, 3);
+if (postToShow.length === 0) return null;
+---
+
+<section class="flex flex-col flex-1 gap-6 md:gap-8">
+  <h3
+    class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+  >
+    <News /> Blog <span>|</span> ¿Qué hay de nuevo?
+  </h3>
+
+  <div class="grid max-w-175 gap-6 grid-cols-1 justify-center md:grid-cols-3">
+    {postToShow.map((post) => <PostCard post={post} />)}
+  </div>
+</section>

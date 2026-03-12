@@ -1,0 +1,33 @@
+---
+import type { Post } from "#pods/post-collection/post.collection.model.ts";
+import Heart from "#assets/icons/Heart.astro";
+
+interface Props {
+  entry: Post;
+  likeCount: number;
+  minReadText: string;  
+}
+const { entry, likeCount, minReadText } = Astro.props;
+
+---
+
+<section class="flex flex-col gap-6">
+  <h1
+    class="text-4xl font-semibold tracking-tight leading-tight text-[rgb(var(--color),0.85)] text-shadow-[0_0_12px_rgb(var(--color),0.25)]"
+  >
+    {entry.title}
+  </h1>
+
+  <div
+    class="flex items-center justify-between gap-4 font-inconsolata font-light text-sm"
+  >
+    <p>{entry.readTime} {minReadText}</p>
+    <div class="flex items-center gap-1.5 [&>svg]:size-4">
+      <Heart aria-hidden="true" />
+      <span>{likeCount}</span>
+    </div>
+  </div>
+  
+
+</section>
+

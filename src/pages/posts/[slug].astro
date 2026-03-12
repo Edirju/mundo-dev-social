@@ -1,0 +1,30 @@
+---
+
+import Layout from "#layouts/Layout.astro";
+import Hero from "#components/Hero.astro";
+import Section from "#components/Section.astro";
+import PostPod from "#pods/post/post.pod.astro"
+
+import { getAllPost } from "#pods/post-collection/post-collection.api.ts";
+import type { Post } from "#pods/post-collection/post.collection.model.ts";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const postEntries = await getAllPost();
+
+  return postEntries.map( entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+const { entry } = Astro.props;
+
+
+
+// if (!entry) {return Astro.redirect("/404")};
+---
+
+<Layout title={entry.title}>
+  <Hero url={entry.image.url} />
+  <PostPod postEntry={entry} />
+</Layout>

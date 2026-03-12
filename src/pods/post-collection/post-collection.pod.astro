@@ -1,0 +1,22 @@
+---
+import { getAllPost } from "./post-collection.api";
+import PostCardAll from "./components/PostCardAll.astro";
+import Section from "#components/Section.astro";
+import News from "#assets/icons/News.astro";
+
+const posts = await getAllPost();
+---
+
+<Section>
+  <section class="flex flex-col flex-1 gap-8">
+    <h3
+      class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+    >
+      <News /> Blog <span>|</span> Publicaciones recientes:
+    </h3>
+
+    <div class="grid max-w-175 gap-6 grid-cols-1 justify-center sm:grid-cols-2 md:grid-cols-3">
+      {posts.map((post) => <PostCardAll post={post} />)}
+    </div>
+  </section>
+</Section>

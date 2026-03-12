@@ -1,0 +1,21 @@
+---
+import Decoratives from "./Decoratives.astro";
+
+interface Props {
+  url?: string;
+  ariaLabelledby?: string;
+}
+const { url, ariaLabelledby } = Astro.props;
+---
+
+<section
+  aria-labelledby={ariaLabelledby}
+  style={url &&
+    `background-image: url(${url}); background-size: cover; background-position: top; background-repeat: no-repeat`}
+  class="hero-section relative min-h-60 max-w-175 mx-auto mt-0 mb-8 sm:mb-12 md:mb-16 rounded-xl backdrop-blur-2xl backdrop-saturate-100 overflow-clip flex items-center justify-center p-4 "
+>
+  <div class="relative z-10">
+    <slot />
+  </div>
+  <Decoratives />
+</section>

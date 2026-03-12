@@ -1,0 +1,58 @@
+---
+import Github from "#assets/icons/Github.astro";
+import Linkedin from "#assets/icons/Linkedin.astro";
+import Bluesky from "#assets/icons/Bluesky.astro";
+import Instagram from "#assets/icons/Instagram.astro";
+import Threads from "#assets/icons/Threads.astro";
+import TwitterX from "#assets/icons/TwitterX.astro";
+import Mail from "#assets/icons/Mail.astro";
+
+import { basics } from "#data/info.json";
+const { profiles, email } = basics;
+const SOCIAL_ICONS: Record<string, any> = {
+  Github,
+  Linkedin,
+  Bluesky,
+  Instagram,
+  Threads,
+  TwitterX,
+};
+---
+
+<nav
+  aria-label="Contact Links"
+  class="flex items-center justify-between text-[rgb(var(--color),0.85)] px-4 [&>a]:size-6 md:[&>a]:size-8 [&>a]:bg-[rgb(var(--dark))] [&>a]:text-[rgb(var(--light))] [&>a]:rounded-full [&>a]:flex [&>a]:items-center [&>a]:justify-center [&>a]:hover:bg-blue-950 [&>a]:hover:text-amber-400 [&>a>svg]:size-4 md:[&>a>svg]:size-5 [&>a]:transition-all [&>a]:duration-300 [&>a]:hover:scale-110 [&>a]:hover:transform-[rotate(360deg)]"
+>
+  {
+    profiles.map(({ network, url }) => {
+      const Icon = SOCIAL_ICONS[network];
+      if (!Icon) return null;
+      return (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Ir a mi ${network}`}
+          title={`Ir a mí ${network}`}
+          class=""
+        >
+          <Icon />
+        </a>
+      );
+    })
+  }
+  {
+    email && (
+      <a
+        href={`mailto:${email}`}
+        target="_blank"
+        rel="noreferrer noopener"
+        title={`Enviar un correo a ${email}`}
+        aria-label={`Enviar un correo a ${email}`}
+        class=""
+      >
+        <Mail />
+      </a>
+    )
+  }
+</nav>
