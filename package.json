@@ -20,7 +20,7 @@
     "@astrojs/react": "^5.0.0",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
-    "@astrojs/vercel": "^8.0.4",
+    "@astrojs/vercel": "^10.0.0",
     "@content-island/api-client": "^0.17.0",
     "@fontsource-variable/inconsolata": "^5.2.8",
     "@fontsource-variable/inter": "^5.2.8",
