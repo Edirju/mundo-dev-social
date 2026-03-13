@@ -1,0 +1,18 @@
+---
+import Info from "#assets/icons/Info.astro";
+---
+
+<button
+  class="group flex items-center justify-center border border-[rgb(var(--color),0.05)] rounded-full p-2 shadow-[0_0_12px_rgb(var(--color),0.15)] transition-all duration-200 hover:text-secondary-500 hover:scale-105"
+>
+  <a
+    href="/resume"
+    title={`Ver mi Curriculum`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex items-center gap-1 tracking-wide group-hover:[&>svg]:animate-rotate-360 font-inconsolata"
+  >
+    <Info />
+    <span class="font-light opacity-45">|</span> Ver Curriculum Vitae
+  </a>
+</button>

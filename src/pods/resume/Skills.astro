@@ -1,0 +1,17 @@
+---
+import Section from "#components/Section.astro";
+import {skills} from "#data/cv.json"
+---
+<Section>
+  <ul class="flex flex-wrap items-center gap-2">
+    {
+      skills.map(({name}) => {
+        return (
+          <li class="flex items-center justify-center text-[10px] font-inconsolata bg-[rgb(var(--dark))] text-white rounded-sm px-2.5 py-1 tracking-widest">
+            {name}
+          </li>
+        )
+      })
+    }
+  </ul>
+</Section>

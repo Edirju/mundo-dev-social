@@ -1,0 +1,43 @@
+---
+import Section from "#components/Section.astro";
+import {work} from "#data/cv.json"
+---
+<Section title="Experiencia">
+  <ul class="flex flex-col gap-4 list-none text-sm text-[rgb(var(--dark),0.85)]">
+    {
+      work.map(({ name, startDate, endDate, position, summary, url, highlights }) => {
+        const startYear = new Date(startDate).getFullYear()
+        const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual"
+        const years = `${startYear} - ${endYear}`
+
+        return (
+          <li>
+            <article>
+              <header class="flex items-start justify-between mb-2 font-inter-tight">
+                <div>
+                  <h3 class="text-base font-semibold text-pretty tracking-wider opacity-75 transition-all duration-300 hover:opacity-100 hover:underline hover:underline-offset-2">
+                    <a href={url}>{name}</a>
+                  </h3>
+                  <h4 class="text-sm font-medium tracking-wide opacity-65">{position}</h4>
+                </div>
+                <time class="text-xs font-light opacity-55 min-w-25.5 md:text-right">{years}</time>
+              </header>
+
+              <footer class="text-xs font-light font-inconsolata text-[rgb(var(--dark),0.85)] ">
+                {
+                  highlights.map((h) => {
+                    return (
+                      <p class="flex items-center gap-4 tracking-tighter m-0 p-0 leading-tight ">
+                        <span class="text-sm">•</span> {h}
+                      </p>
+                    )
+                  })
+                }
+              </footer>
+            </article>
+          </li>
+        )
+      })
+    }
+  </ul>
+</Section>

@@ -1,0 +1,81 @@
+---
+import BaseHead from "#components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "#consts.ts";
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const description = SITE_DESCRIPTION;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+    background: rgb(var(--light));
+    color: rgb(var(--dark));
+  }
+  html {
+    background: rgb(var(--light), 1) !important;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+  img,
+  video,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition: none;
+    }
+  }
+  main {
+    margin: 64px 0;
+  }
+  @media (width <= 700px) {
+    main {
+      margin: 32px 0;
+    }
+  }
+</style>

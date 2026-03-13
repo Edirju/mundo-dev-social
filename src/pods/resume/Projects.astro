@@ -1,0 +1,57 @@
+---
+import Section from "#components/Section.astro";
+import Github from "#assets/icons/Github.astro";
+import { projects } from "#data/cv.json";
+---
+
+<Section title="Proyectos">
+  <ul
+    class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 mx-0 md:-mx-1.5 shadow-[0_1px_1px_rgb(242,242,242,0.35)] sm:shadow-none"
+  >
+    {
+      projects.map(
+        ({ url, description, highlights, name, isActive, github }) => {
+          return (
+            <li>
+              <article class="border-0 pb-4 sm:border sm:border-[rgb(var(--dark),0.1)] rounded-lg overflow-hidden sm:p-2 flex flex-col justify-between gap-2 h-full ">
+                <header class="">
+                  <h3 class="flex items-center gap-1">
+                    <a
+                      href={url}
+                      class="text-sm font-medium text-[rgb(var(--dark),0.65)] text-pretty tracking-tighter transition-all duration-300 hover:text-[rgb(var(--dark))] hover:underline hover:underline-offset-2"
+                    >
+                      {name}
+                    </a>
+                    {isActive && (
+                      <span class="text-[rgb(0,188,47,1)] inset-0">•</span>
+                    )}
+                    {github && (
+                      <a href="#" class="[&>svg]:size-5 [&>svg]:ml-1 ">
+                        <Github />
+                      </a>
+                    )}
+                  </h3>
+                  <p class="text-xs font-light font-inconsolata leading-tight text-pretty opacity-55">
+                    {description}
+                  </p>
+                </header>
+
+                <footer>
+                  <ul class="flex flex-wrap gap-1">
+                    {highlights.map((highlight) => {
+                      return (
+                        <span class="text-[10px] font-inconsolata font-light text-[rgb(var(--dark),0.65)] bg-[rgb(var(--dark),0.08)] py-0.5 px-1 rounded-md w-fit">
+                          {highlight}
+                        </span>
+                      );
+                    })}
+                  </ul>
+                </footer>
+              </article>
+            </li>
+          );
+        },
+      )
+    }
+  </ul>
+</Section>

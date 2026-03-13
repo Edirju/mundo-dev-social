@@ -1,0 +1,106 @@
+---
+import Section from "#components/Section.astro";
+import { basics } from "#data/cv.json";
+const { name, label, image, location, profiles, phone, email, url } = basics;
+const { city, region } = location;
+
+import Github from "#assets/icons/Github.astro";
+import Linkedin from "#assets/icons/Linkedin.astro";
+import Bluesky from "#assets/icons/Bluesky.astro";
+import Instagram from "#assets/icons/Instagram.astro";
+import Threads from "#assets/icons/Threads.astro";
+import Mail from "#assets/icons/Mail.astro";
+import Globe from "#assets/icons/Globe.astro";
+import Phone from "#assets/icons/Phone.astro";
+import Locations from "#assets/icons/Locations.astro";
+
+const SOCIAL_ICONS: Record<string, any> = {
+  Github,
+  Linkedin,
+  Bluesky,
+  Instagram,
+  Threads,
+};
+const linkedInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedUrl = linkedInfo?.url;
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+---
+
+<Section>
+  <header
+    class="flex flex-col-reverse items-center justify-center gap-4 text-[rgb(var(--dark),0.85)] md:flex-row"
+  >
+    <div
+      class="flex flex-col items-center justify-center text-center pr-0 md:items-start md:justify-start md:text-left"
+    >
+      <h1
+        class="font-inter-tight text-2xl font-bold capitalize tracking-tighter"
+      >
+        {name}
+      </h1>
+      <p
+        class="text-base font-inconsolata font-light text-balance tracking-tighter leading-tight md:text-pretty md:leading-normal"
+      >
+        {label}
+      </p>
+      <span
+        class="flex items-center gap-1.5 text-xs font-inconsolata font-light text-balance tracking-tighter leading-tight opacity-65"
+      >
+        <Locations />
+        {city}, {region}
+      </span>
+      <footer class="print">{printInfo}</footer>
+      <footer
+        class="no-print flex items-center gap-2 mt-2 text-xs text-[rgb(var(--dark),0.65)] [&>a]:inline-flex [&>a]:items-center [&>a]:justify-center [&>a]:border [&>a]:border-[rgb(var(--dark),0.10)] [&>a]:rounded-md [&>a]:size-8 [&>a]:transition-all [&>a]:duration-300 [&>a]:hover:bg-[rgb(var(--dark),0.08)] [&>a]:hover:border-[rgb(var(--dark),0.18)] [&>a>svg]:size-5 [&>a>svg]:hover:scale-105 [&>a>svg]:hover:text-[rgb(var(--dark))]"
+      >
+        {
+          url && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Visitar ${url}`}
+            >
+              <Globe />
+            </a>
+          )
+        }
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title={`Enviar un email a ${name} - ${email}`}
+              rel="noreferrer"
+            >
+              <Mail />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
+            if (!Icon) return null;
+            return (
+              <a
+                href={url}
+                title={`Visita mi perfil en ${network}`}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <Icon />
+              </a>
+            );
+          })
+        }
+      </footer>
+    </div>
+
+    <figure class="flex items-center justify-center mx-0 my-auto">
+      <img
+        src={image}
+        alt={name}
+        class="w-40 aspect-square object-cover rounded-md grayscale md:w-[65%] shadow-[0_0_12px_rgb(0,0,0,0.08)]"
+      />
+    </figure>
+  </header>
+</Section>

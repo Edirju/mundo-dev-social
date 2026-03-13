@@ -1,0 +1,10 @@
+---
+import Section from "#components/Section.astro";
+import { basics } from "#data/cv.json"
+const {summary} = basics
+---
+<Section title="Sobre mí">
+  <p class=" font-inconsolata text-sm font-light text-[rgb(var(--dark),0.65)] text-balance leading-tight tracking-tight">
+    {summary}
+  </p>
+</Section>
