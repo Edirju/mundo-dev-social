@@ -106,7 +106,7 @@ const toolCollectionContent: ToolSectionContent = {
   <ul class="flex flex-wrap gap-6 max-w-lg">
     {
       toolCollectionContent.tools.map(t => (
-        <li class="border border-[rgb(var(--color),0.1)] size-8 grid place-content-center rounded-lg bg-[rgb(var(--light),0.35)] dark:bg-[rgb(var(--dark),0.35)] backdrop-blur-2xl backdrop-saturate-100 shadow-[0_0_8px_rgb(var(--color),0.15)] transition-all duration-300 hover:scale-125 ">
+        <li class="border border-[rgb(var(--color),0.1)] size-8 grid place-content-center rounded-lg bg-[rgb(var(--light),0.35)] dark:bg-secondary-500/35 backdrop-blur-2xl backdrop-saturate-100 shadow-[0_0_8px_rgb(var(--color),0.15)] transition-all duration-300 hover:scale-125 ">
           <img src={t.logo} alt={t.name} title={t.name} class="size-5 object-cover" />
         </li>
       ))
