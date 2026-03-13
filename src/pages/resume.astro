@@ -1,8 +1,24 @@
 ---
-import Layout from "#layouts/Layout.astro"
-import Grid from "#components/Grid.astro"
-import Hero from "#components/Hero.astro"
+import Layout from "#layouts/CV.astro"
+import Hero from "#pods/resume/Hero.astro"
+import About from "#pods/resume/About.astro"
+import Skills from "#pods/resume/Skills.astro"
+import Education from "#pods/resume/Education.astro"
+import Experience from "#pods/resume/Experience.astro"
+import Projects from "#pods/resume/Projects.astro"
+import KeyboardManager from "#components/KeyboardManager.astro"
 
-
+import { basics } from "#data/cv.json";
+const { name, label } = basics;
 ---
-
+<Layout title={`Curriculum Vitae de ${name} • ${label}`}>
+  <main class="my-8 md:my-16">
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Skills />
+    <Projects />
+  </main>
+  <KeyboardManager />
+</Layout>
