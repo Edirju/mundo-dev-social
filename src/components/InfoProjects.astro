@@ -1,0 +1,54 @@
+---
+import Info from "#assets/icons/Info.astro";
+const { info } = Astro.props;
+const { theme = {} } = info;
+const { isDark = false } = theme;
+---
+
+<div
+  class="hidden sm:block border border-[rgb(var(--color),0.15)] rounded-xl px-6 py-2 absolute left-6 bottom-6 bg-[rgb(var(--light),0.14)] backdrop-blur-xl shadow-[0_4px_30px_rgb(0,0,0,0.15)]"
+>
+  <h1 class="font-inter-tight font-bold text-[rgb(var(--color),0.85)] mb-1">
+    <a href="/projects" class="flex items-center gap-2 text-sm uppercase">
+      <span
+        class:list={[
+          "[&>svg]:size-5",
+          { "text-amber-500": !isDark, "text-cyan-500": isDark },
+        ]}
+      >
+        <Info />
+      </span>
+
+      <div
+        class:list={[
+          "tracking-tight inline-block bg-clip-text text-transparent bg-linear-to-r text-shadow-[0_0_8px_rgb(var(--color),0.25)]",
+          {
+            "from-amber-500 to-amber-950": !isDark,
+            "from-cyan-500 to-cyan-800": isDark,
+          },
+        ]}
+      >
+        Ver+ Proyectos
+      </div>
+    </a>
+  </h1>
+
+  <h2
+    class:list={[
+      isDark ? "text-cyan-400" : "text-amber-600",
+      "text-sm font-light capitalize",
+    ]}
+  >
+    # {info.number} - {info.title}
+  </h2>
+
+  <a
+    href="/projects"
+    class:list={[
+      isDark ? "text-cyan-600" : "text-amber-800",
+      "font-inconsolata text-xs font-light hover:underline hover:underline-offset-2 transition-all duration-300",
+    ]}
+  >
+    ← Regresa a 'Proyectos'.
+  </a>
+</div>

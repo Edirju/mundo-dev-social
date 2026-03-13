@@ -1,0 +1,21 @@
+---
+import BaseHead from "#components/BaseHead.astro"
+import { SITE_TITLE, SITE_DESCRIPTION } from "#consts.ts";
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const description = SITE_DESCRIPTION;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <BaseHead title={title} description={description} />
+</head>
+<body class="text-[rgb(var(--color),0.85)] font-inter">
+  <main class="relative min-h-dvh w-full">
+    <slot />
+  </main>
+</body>
+</html>
+
