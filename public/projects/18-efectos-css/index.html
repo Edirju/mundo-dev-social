@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efectos Modernos de CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <main class="min-h-[100dvh] relative">
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-transparent bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_14px]">
+      <div
+        class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-[rgb(var(--primary))] opacity-20 blur-[100px]">
+      </div>
+    </div>
+
+    <section class="max-w-[700px] mx-auto my-6">
+      <article class="font-[family-name:var(--body)] text-[rgb(var(--secondary),0.85)] flex flex-col items-center justify-center gap-12"
+      >
+        <header>
+          <h1
+            class="flex items-center justify-center sm:justify-start gap-1 text-[clamp(1.125rem,1.0909rem_+_0.1818vw,1.25rem)] capitalize font-bold tracking-tighter text-pretty text-shadow-[0_0_8px_rgb(var(--accent),0.5)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M16 16C17.6569 16 19 17.3431 19 19C19 20.6569 17.6569 22 16 22C14.3431 22 13 20.6569 13 19C13 17.3431 14.3431 16 16 16ZM6 12C8.20914 12 10 13.7909 10 16C10 18.2091 8.20914 20 6 20C3.79086 20 2 18.2091 2 16C2 13.7909 3.79086 12 6 12ZM14.5 2C17.5376 2 20 4.46243 20 7.5C20 10.5376 17.5376 13 14.5 13C11.4624 13 9 10.5376 9 7.5C9 4.46243 11.4624 2 14.5 2Z">
+              </path>
+            </svg>
+            <span class="font-extralight opacity-45">|</span>
+            Animación circular en CSS.
+          </h1>
+        </header>
+
+        <figure class="circle">
+          <img src="./img/foto1.jpg" alt="">
+        </figure>
+
+        <header class="mt-8">
+          <h1
+            class="flex items-center justify-center sm:justify-start gap-1 text-[clamp(1.125rem,1.0909rem_+_0.1818vw,1.25rem)] capitalize font-bold tracking-tighter text-pretty text-shadow-[0_0_8px_rgb(var(--accent),0.5)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M16 16C17.6569 16 19 17.3431 19 19C19 20.6569 17.6569 22 16 22C14.3431 22 13 20.6569 13 19C13 17.3431 14.3431 16 16 16ZM6 12C8.20914 12 10 13.7909 10 16C10 18.2091 8.20914 20 6 20C3.79086 20 2 18.2091 2 16C2 13.7909 3.79086 12 6 12ZM14.5 2C17.5376 2 20 4.46243 20 7.5C20 10.5376 17.5376 13 14.5 13C11.4624 13 9 10.5376 9 7.5C9 4.46243 11.4624 2 14.5 2Z">
+              </path>
+            </svg>
+            <span class="font-extralight opacity-45">|</span>
+            Efecto CSS Hover: Animaciones Circulares.
+          </h1>
+        </header>
+
+        <div class="social">
+          <a href="#" title="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
+            </svg>
+          </a>
+          <a href="#" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+              <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+              <path d="M16.5 7.5v.01" />
+            </svg>
+          </a>
+          <a href="#" title="BlueSky">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bluesky">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856z" />
+            </svg>
+          </a>
+          <a href="#" title="Github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" />
+            </svg>
+          </a>
+          <a href="#" title="Threads">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threads">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1" />
+            </svg>
+          </a>
+        </div>
+
+        <header class="mt-8">
+          <h1
+            class="flex items-center justify-center sm:justify-start gap-1 text-[clamp(1.125rem,1.0909rem_+_0.1818vw,1.25rem)] capitalize font-bold tracking-tighter text-pretty text-shadow-[0_0_8px_rgb(var(--accent),0.5)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M16 16C17.6569 16 19 17.3431 19 19C19 20.6569 17.6569 22 16 22C14.3431 22 13 20.6569 13 19C13 17.3431 14.3431 16 16 16ZM6 12C8.20914 12 10 13.7909 10 16C10 18.2091 8.20914 20 6 20C3.79086 20 2 18.2091 2 16C2 13.7909 3.79086 12 6 12ZM14.5 2C17.5376 2 20 4.46243 20 7.5C20 10.5376 17.5376 13 14.5 13C11.4624 13 9 10.5376 9 7.5C9 4.46243 11.4624 2 14.5 2Z">
+              </path>
+            </svg>
+            <span class="font-extralight opacity-45">|</span>
+            Efecto CSS bordes: Animación.
+          </h1>
+        </header>
+
+        <article class="card">
+          <h2 class="font-bold text-xl capitalize text-balance">bordes animados</h2>
+          <p class="font-light tracking-tighter leading-normal text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, recusandae. Ut fugiat ratione et similique laborum
+            nobis officia facere molestias culpa ipsa quaerat possimus nihil, iure laboriosam? In, repellendus expedita?
+          </p>
+        </article>
+
+        <header class="mt-8">
+          <h1
+            class="flex items-center justify-center sm:justify-start gap-1 text-[clamp(1.125rem,1.0909rem_+_0.1818vw,1.25rem)] capitalize font-bold tracking-tighter text-pretty text-shadow-[0_0_8px_rgb(var(--accent),0.5)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M16 16C17.6569 16 19 17.3431 19 19C19 20.6569 17.6569 22 16 22C14.3431 22 13 20.6569 13 19C13 17.3431 14.3431 16 16 16ZM6 12C8.20914 12 10 13.7909 10 16C10 18.2091 8.20914 20 6 20C3.79086 20 2 18.2091 2 16C2 13.7909 3.79086 12 6 12ZM14.5 2C17.5376 2 20 4.46243 20 7.5C20 10.5376 17.5376 13 14.5 13C11.4624 13 9 10.5376 9 7.5C9 4.46243 11.4624 2 14.5 2Z">
+              </path>
+            </svg>
+            <span class="font-extralight opacity-45">|</span>
+            Efecto CSS texto: degradado animado.
+          </h1>
+        </header>
+
+        <div class="box">
+          <h1 class="texto">Never Give Up</h1>
+        </div>
+        
+      </article>
+    </section>
+    
+
+    <!-- <section>
+      <article class="font-[family-name:var(--font-body)] text-[rgb(var(--light),0.85)] flex flex-col gap-6 items-center">
+        <header class="flex flex-col gap-2">
+          <h1
+            class="flex items-center justify-center sm:justify-start gap-1 text-[clamp(1.125rem,1.0909rem_+_0.1818vw,1.25rem)] capitalize font-bold tracking-tighter text-pretty text-shadow-[0_0_8px_rgb(var(--primary),0.5)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M16 16C17.6569 16 19 17.3431 19 19C19 20.6569 17.6569 22 16 22C14.3431 22 13 20.6569 13 19C13 17.3431 14.3431 16 16 16ZM6 12C8.20914 12 10 13.7909 10 16C10 18.2091 8.20914 20 6 20C3.79086 20 2 18.2091 2 16C2 13.7909 3.79086 12 6 12ZM14.5 2C17.5376 2 20 4.46243 20 7.5C20 10.5376 17.5376 13 14.5 13C11.4624 13 9 10.5376 9 7.5C9 4.46243 11.4624 2 14.5 2Z">
+              </path>
+            </svg>
+            <span class="font-extralight opacity-45">|</span>
+            Texto Gradiente animado.
+          </h1>
+          <p class=" font-light tracking-tight text-sm text-[rgb(var(--light),0.65)] text-center sm:text-left text-balance">
+            Texto degradado en texto con animaciones.
+          </p>
+        </header>
+        <footer class="body">
+          <h1 class="heading">Happy New Year</h1>
+        </footer>
+      </article>
+    </section> -->
+  </main>
+</body>
+
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+  :root {
+    --body: "DM Sans", sans-serif;
+    --mono: "DM Mono", monospace;
+
+    --primary: 240, 145, 70;
+    /* #f09146 */
+    --secondary: 18, 26, 40;
+    /* #121a28 */
+    --accent: 162, 48, 4;
+    /* #a23004 */
+    --accent-dark: 122, 48, 4;
+    /* #7a3004 */
+    --dark: 30, 37, 44;
+    /* #1e252c */
+    --light: 255, 254, 254;
+    /*#FFFEFE*/
+    --black: 15, 18, 25;
+    /*#0f1219*/
+    --gray: 52, 66, 86;
+    /*#344256*/
+    --gray-light: 229, 233, 240;
+    /*#e5e9f0*/
+  }
+
+  .circle {
+    position: relative;
+    width: 160px;
+    aspect-ratio: 1;
+    border-radius: 50%;    
+    outline: 30px solid rgb(var(--secondary), 0.35);
+    outline-offset: -12px;
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: top;
+      border-radius: inherit;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      inset: -40px;
+      border-radius: inherit;
+      background-image: conic-gradient(
+        rgb(var(--primary)), #fc00ff, #00dbde, rgb(var(--primary))
+      );
+      animation: rotate 3s linear infinite;
+    }
+    &::after {
+      filter: blur(2rem);
+      opacity: .75;
+    }
+    &:hover::before,
+    &:hover::after {
+      animation-play-state: paused;
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    a{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: 5rem;
+      aspect-ratio: 1;
+      font-size: 2rem;
+      color: rgb(var(--light));
+      background-color: rgb(var(--dark));
+      border-radius: 50%;
+      transition: color 0.6s ease-in-out;
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        inset: -5px;
+        border-radius: inherit;
+        background: conic-gradient(currentColor var(--fill), transparent var(--fill));
+        transition: --fill 0.6s 0.3s ease-in-out;
+      }
+      &:hover,
+      &:focus-visible,
+      &:focus-within {
+        color: rgb(var(--primary));
+        outline: 1px solid transparent;
+      }
+      &:hover,
+      &:hover::before,
+      &:hover::after {
+        transition-delay: 0s;
+      }
+      /* Efecto 1*/
+      &:nth-child(1):hover,
+      &:nth-child(1):focus-visible,
+      &:nth-child(1):focus-within {
+        --fill: 100%;
+      }
+      &:nth-child(1)::after {
+        display: none;
+      }
+      /* Efecto 2 */
+      &:nth-child(2):hover,
+      &:nth-child(2):focus-visible,
+      &:nth-child(2):focus-within {
+        --fill: 100%;
+      }
+      &:nth-child(2)::before {
+        transform: rotateY(180deg);
+      }
+      &:nth-child(2)::after {
+        display: none;
+      }
+      /* Efecto 3 */
+      &:nth-child(3):hover,
+      &:nth-child(3):focus-visible,
+      &:nth-child(3):focus-within {
+        --fill: 50%;
+      }
+      &:nth-child(3)::after {
+        transform: rotateY(180deg);
+      }
+      /* Efecto 4 */
+      &:nth-child(4):hover,
+      &:nth-child(4):focus-visible,
+      &:nth-child(4):focus-within {
+        --fill: 50%;
+      }
+      &:nth-child(4)::before {
+        transform: rotateX(180deg);
+      }
+      &:nth-child(4)::after {
+        transform: rotate(180deg);
+      }
+      /* Efecto 5 */
+      &:nth-child(5):hover,
+      &:nth-child(5):focus-visible,
+      &:nth-child(5):focus-within {
+        --fill: 50%;
+      }
+      &:nth-child(5)::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .card {
+    margin: 0 auto;
+    padding: 2em;
+    width: 300px;
+    color: rgb(var(--light));
+    background: rgb(var(--dark));
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    h2{
+      text-shadow: 0 0 4px rgb(var(--primary));
+      margin-bottom: .5rem;
+    }
+    &::after,
+    &::before {
+      /*--angle: 0deg;*/
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      /*background-image: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);*/
+      background-image: conic-gradient(from var(--angle), transparent 70%, blue);
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+      padding: 3px;
+      border-radius: 10px;
+      animation: 3s spin linear infinite;  
+    }
+    &::before{
+      filter: blur(1.5rem);
+      opacity: 0.85;   
+    }  
+  }  
+  .box {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgb(var(--light));
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+    /*min-block-size: 25dvh;*/
+    border-radius: 10px;
+    border: 4px solid rgb(var(--primary));
+    background: rgb(var(--dark));
+    box-shadow: 0 0 8px rgb(var(--dark),0.45);
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .texto {
+      font-size: clamp(2rem, 6vw + 1rem, 5rem);
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+
+      background-image:
+        linear-gradient(to right,
+          #14f339,
+          #007aff,
+          #f6ee00,
+          #007aff,
+          #14f339,
+          #ff6262,
+          #f6ee00,
+          #007aff,
+          #14f339);
+      /* padding: 1rem;
+      border: 20px solid rgb(255 255 255 / 50%);
+      background-clip: border-box;
+      background-clip: content-box; */
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      --bg-size: 200%;
+      color: transparent;
+      background-size: var(--bg-size);
+
+      animation: animate 2s steps(5) infinite;
+      animation: animate 2s linear infinite;
+      animation: animate 2s ease infinite;
+    }
+  }
+
+  @media (width <=700px) {
+    section {
+      padding-inline: 1rem;
+      padding-block: 0;
+      margin-bottom: 38px;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      rotate: 0;
+    }
+
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      --angle: 0deg;
+    }
+
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  @keyframes animate {
+    /*from {
+      background-position: 0;
+    }*/
+    to {
+      background-position: var(--bg-size);
+    }
+  }
+
+  @property --fill {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+  }
+
+  @property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+</style>

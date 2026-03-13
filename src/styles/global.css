@@ -5,7 +5,6 @@
 @import '@fontsource-variable/inter-tight';
 @import '@fontsource-variable/inconsolata';
 
-
 :root {
 	/* Fonts */
 	--font-inter-tight: "Inter Tight Variable", sans-serif;
@@ -21,14 +20,20 @@
 	--step-4: clamp(1.7019rem, 1.4484rem + 1.1266vw, 2.4624rem);
 	--step-5: clamp(1.9147rem, 1.5679rem + 1.5411vw, 2.9549rem);
 	--step-6: clamp(2.154rem, 1.69rem + 2.062vw, 3.5459rem);
-	
+
 	/* Colors Base */
-	--dark: 30, 37, 44;	/* #1e252c */
-	--light: 255, 254, 254;	/* #fffefe */
-	--accent: 205, 82, 65;	/* #cd5241 */
-	--accent-dark: 98, 35, 26;	/* #62231a */
-	--accent-50: 0, 102, 94;	/* #00665e */
-	--accent-dark-50: 0, 60, 55;	/* #003c37 */
+	--dark: 30, 37, 44;
+	/* #1e252c */
+	--light: 255, 254, 254;
+	/* #fffefe */
+	--accent: 205, 82, 65;
+	/* #cd5241 */
+	--accent-dark: 98, 35, 26;
+	/* #62231a */
+	--accent-50: 0, 102, 94;
+	/* #00665e */
+	--accent-dark-50: 0, 60, 55;
+	/* #003c37 */
 	--color-text: hsl(210, 19%, 15%);
 	--color: 30, 37, 44;
 
@@ -196,6 +201,90 @@
 
 	--color-text-color: rgb(var(--color));
 
+}
+
+@layer components {
+	.marked {
+    @apply text-base leading-relaxed;
+		h1, h2, h3, h4, h5, h6 {
+			@apply font-bold tracking-tight leading-tight mt-2 mb-4 text-pretty;
+		}
+
+    h1 {
+      @apply  text-[40px];
+    }
+
+    h2 {
+      @apply text-[32px];
+    }
+
+    h3 {
+      @apply text-[24px];
+    }
+
+		h4 {
+			@apply text-[20px];
+		}
+
+		h5, h6 {
+			@apply text-[18px];
+		}
+
+    p {
+      @apply mb-6 leading-tight;
+    }
+
+    img {
+      @apply mt-6 mb-6 h-auto max-w-full rounded-lg;
+    }
+
+    ul {
+      @apply mb-4 ml-6 list-disc space-y-1 pl-4 list-inside leading-normal;
+    }
+
+    ol {
+      @apply mb-4 ml-6 list-decimal space-y-1 pl-4 list-inside ;
+    }
+
+    blockquote {
+      @apply mt-6 mb-6 ml-6 border-l-3 border-[rgb(var(--color),0.45)] pl-4 text-[rgb(var(--color),0.75)] italic tracking-tighter leading-tight text-sm md:text-lg;
+    }
+
+    hr {
+      @apply my-8 border-t border-[rgb(var(--color),0.15)];
+    }
+
+    a {
+      @apply text-primary-600 hover:text-primary-700 decoration-[1.4px] underline-offset-2 transition-all hover:underline;
+    }
+
+		table {
+			@apply table-fixed text-sm border-separate border border-[rgb(var(--color),0.05)] border-spacing-3 rounded-md bg-[rgb(var(--light),0.05)] backdrop-blur-2xl ;
+			thead tr th {
+				@apply border-b border-dashed ;
+			}
+		}
+
+		mark {
+			@apply bg-amber-300 text-zinc-800 px-1 font-light rounded-xs ;
+		}
+
+    pre {
+      @apply text-sm bg-[rgb(var(--light),0.85)] text-[rgb(var(--color),0.85)] dark:bg-gray-900  font-light leading-normal py-2 px-4;
+    }
+
+		pre > code {
+			all: unset;
+		}		
+
+    code.hljs {
+      @apply bg-[rgb(var(--light),0.85)] dark:bg-gray-900 text-[rgb(var(--color),0.85)] tracking-tight font-inconsolata font-light text-sm backdrop-blur-2xl  ;
+    }
+
+    code:not(pre code) {
+      @apply rounded bg-[rgb(var(--light),0.85)] px-1.5 py-1 dark:bg-gray-900;
+    }
+  }
 }
 
 body {

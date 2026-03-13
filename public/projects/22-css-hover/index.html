@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efecto CSS Hover con Animaciones Circulares</title>
+</head>
+<body>
+  <h1>Cinco-En-Uno</h1>
+  <h2>Icon Hover Animations</h2>
+
+  <div class="social">
+    <a href="#" title="YouTube">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+        class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
+      </svg>
+    </a>
+    <a href="#" title="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+        <path d="M16.5 7.5v.01" />
+      </svg>
+    </a>
+    <a href="#" title="BlueSky">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bluesky">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856z" />
+      </svg>
+    </a>
+    <a href="#" title="Github">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+        class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" />
+      </svg>
+    </a>
+    <a href="#" title="Threads">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threads">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1" />
+      </svg>
+    </a>
+  </div>
+</body>
+</html>
+
+<style>
+  h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;    
+    text-align: center;
+    color: #141414;
+    text-shadow: 0 0 8px rgb(0,0,0,0.35);
+  }
+  h2{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-block-end: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #1e252c;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 5rem;
+    aspect-ratio: 1;
+    font-size: 2rem;
+    color: #636363;
+    background-color: #2b2b2b;
+    border-radius: 50%;
+    transition: color 0.6s ease-in-out;
+  }
+
+  @property --fill {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+  }
+
+  a::before,
+  a::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    inset: -5px;
+    border-radius: inherit;
+    background: conic-gradient(currentColor var(--fill), transparent var(--fill));
+    transition: --fill 0.6s 0.3s ease-in-out;
+  } 
+  a:hover,
+  a:focus-visible,
+  a:focus-within {
+    color: greenyellow;
+    outline: 1px solid transparent;
+  }
+
+  a:hover,
+  a:hover::before,
+  a:hover::after {
+    transition-delay: 0s;
+  }
+  
+  /* Efecto 1 */
+  a:nth-child(1):hover,
+  a:nth-child(1):focus-visible,
+  a:nth-child(1):focus-within {
+    --fill: 100%;  
+  }
+  a:nth-child(1)::after {
+    display: none;
+  }
+
+  /* Efecto 2 */
+  a:nth-child(2):hover,
+  a:nth-child(2):focus-visible,
+  a:nth-child(2):focus-within {
+    --fill: 100%;
+  }
+  a:nth-child(2)::before {
+    transform: rotateY(180deg);
+  }
+  a:nth-child(2)::after {
+    display: none;
+  }
+
+  /* Efecto 3 */
+  a:nth-child(3):hover,
+  a:nth-child(3):focus-visible,
+  a:nth-child(3):focus-within {
+    --fill: 50%;
+  }
+  a:nth-child(3)::after {
+    transform: rotateY(180deg);
+  }
+
+  /* Efecto 4 */
+  a:nth-child(4):hover,
+  a:nth-child(4):focus-visible,
+  a:nth-child(4):focus-within {
+    --fill: 50%;
+  }
+  a:nth-child(4)::before {
+    transform: rotateX(180deg);
+  }
+  a:nth-child(4)::after {
+    transform: rotate(180deg);
+  }
+
+  /* Efecto 5 */
+  a:nth-child(5):hover,
+  a:nth-child(5):focus-visible,
+  a:nth-child(5):focus-within {
+    --fill: 50%;
+  }
+  a:nth-child(5)::after {
+    transform: rotate(180deg);
+  }
+</style>

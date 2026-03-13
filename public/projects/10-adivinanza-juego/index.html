@@ -1,0 +1,78 @@
+<title>Proyecto • 10 - Adivina el número</title>
+<body>
+  <main>
+    <h1>Adivina el número</h1>
+    <p>Introduce un número entre 1 y 100</p>
+    <input type="number" id="numeroEntrada">
+    <button onclick="chequearResultado()">Comprobar</button>
+    <p id="mensaje">¡A jugar!</p>
+    <h4>
+      Cantidad de intentos: <p id="intento">0</p>
+    </h4>
+  </main>
+</body>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    text-align: center; 
+    color: #1e252c;   
+  }
+  h1{
+    color: #1e252c;
+    font-family: Menlo, monospace;
+  }
+  input {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  button {
+    padding: 8px 12px;
+    background-color: #ffcc33;
+    color: #1e252c;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #mensaje {
+    color: #141414;
+    font-family: Menlo, monospace;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+</style>
+
+<script>
+  let numeroAzar = Math.floor(Math.random() * 100) + 1;
+  let numeroEntrada = document.getElementById("numeroEntrada");
+  let mensaje = document.getElementById("mensaje");
+  let intento = document.getElementById("intento");
+  let intentos = 0;
+
+  function chequearResultado() {
+    intentos++;
+    intento.textContent = intentos;
+    let numeroIngresado = parseInt(numeroEntrada.value);
+
+    if(numeroIngresado < 1 || numeroIngresado > 100 || isNaN(numeroIngresado)) {
+      mensaje.textContent = "Por favor, ingresa un número válido entre 1 y 100.";
+      mensaje.style.color = "black";
+      return;
+    }
+    if(numeroIngresado === numeroAzar) {
+      mensaje.textContent = "¡Felicitaciones! Has adivinado el número.";
+      mensaje.style.color = "green";
+      numeroEntrada.disabled = true;
+    } else if (numeroIngresado < numeroAzar) {
+      mensaje.textContent = "Lo siento, pero el número es mayor.";
+      mensaje.style.color = "red";
+    } else {
+      mensaje.textContent = "Lo siento, pero el número es menor.";
+      mensaje.style.color = "green";
+    }
+  }
+</script>

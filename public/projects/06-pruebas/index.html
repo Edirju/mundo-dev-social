@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efecto Typing Fijo Izquierda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="typing-container"> <!-- Contenedor principal -->
+    <h1>
+      <span class="static-text">Soy </span><!-- Fijo a la izquierda -->
+      <span id="dynamic-text" class="dynamic-text"></span><!-- Crece a la derecha -->
+      <span class="cursor"> </span>
+    </h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    /* No centramos el contenido del body aquí si queremos que el typing empiece a la izquierda de la pantalla */
+    margin: 20px; /* O el padding que desees para el body */
+    background-color: transparent;
+    color: #fffefe;
+}
+
+.typing-container {
+    /* Este contenedor puede usarse para posicionar el bloque h1
+       Si quieres que el h1 empiece pegado a la izquierda del viewport: */
+    text-align: left; /* Asegura que el contenido interno (h1) se alinee a la izquierda */
+    /* Si quieres darle un ancho máximo al contenedor de typing y centrar ese contenedor
+       en la página, PERO el texto dentro del contenedor se alinea a la izquierda:
+       max-width: 800px;
+       margin-left: auto;
+       margin-right: auto;
+       border: 1px solid #ccc; /* solo para visualización del contenedor */
+    /* */
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fffefe;
+    /* Quitamos el borde y padding que lo hacían un bloque centrado visible
+       y hacemos que se comporte más como una línea de texto normal */
+    /* border: 2px solid #3498db; */
+    /* padding: 20px 30px; */
+    /* border-radius: 8px; */
+    /* background-color: #fff; */
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+
+    display: inline-block; /* Para que el h1 solo ocupe el ancho de su contenido */
+                           /* O 'block' si quieres que ocupe todo el ancho disponible y el texto interno se alinee */
+    margin: 0; /* Reseteamos márgenes del h1 */
+    padding: 0; /* Reseteamos padding del h1 */
+    /* text-align: left; YA NO ES NECESARIO AQUÍ SI .typing-container LO HACE,
+                        o si h1 es inline-block, se alinea por defecto a la izquierda de su contenedor */
+}
+
+.static-text {
+    color: #fffefe;
+    /* No necesita nada especial, simplemente fluye */
+}
+
+.dynamic-text {
+    color: #e74c3c;
+    /* No necesita nada especial para la posición,
+       JavaScript se encarga de llenarlo */
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px; /* O el ancho que prefieras para el cursor */
+    background-color: #fffefe; /* Color del cursor */
+    margin-left: 2px; /* Pequeño espacio entre el último carácter y el cursor */
+    animation: blink 0.7s infinite;
+    vertical-align: text-bottom; /* Alinea con la base del texto */
+    height: 1em; /* Altura relativa, JS puede ajustarla */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const dynamicTextElement = document.getElementById('dynamic-text');
+      const cursorElement = document.querySelector('.cursor');
+
+      if (!dynamicTextElement || !cursorElement) {
+        console.error("No se encontraron los elementos necesarios para el efecto typing.");
+        return;
+      }
+
+      const phrases = [
+        "un Desarrollador Frontend.",
+        "un experto en React y Vue.",
+        "una persona Creativa y Apasionada.",
+        "un Programador Fullstack!"
+      ];
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      const typingSpeed = 120;
+      const deletingSpeed = 60;
+      const delayBetweenPhrases = 1500;
+
+      function type() {
+        const currentPhrase = phrases[phraseIndex];
+        let currentText = '';
+        let speed = typingSpeed;
+
+        if (isDeleting) {
+          currentText = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+          speed = deletingSpeed;
+        } else {
+          currentText = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        dynamicTextElement.textContent = currentText;
+
+        const h1Element = dynamicTextElement.closest('h1');
+        if (h1Element) {
+          const computedStyle = window.getComputedStyle(h1Element);
+          let lineHeight = parseFloat(computedStyle.lineHeight);
+          // Si lineHeight es 'normal', intenta obtenerlo del font-size
+          if (isNaN(lineHeight) || computedStyle.lineHeight === 'normal') {
+            lineHeight = parseFloat(computedStyle.fontSize) * 1.2; // Un multiplicador común para 'normal'
+          }
+          cursorElement.style.height = (isNaN(lineHeight) || lineHeight === 0) ? '1em' : `${lineHeight}px`;
+        } else {
+          cursorElement.style.height = '1em';
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          isDeleting = true;
+          speed = delayBetweenPhrases;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          speed = typingSpeed;
+        }
+
+        setTimeout(type, speed);
+      }
+
+      setTimeout(type, 500);
+    });
+</script>

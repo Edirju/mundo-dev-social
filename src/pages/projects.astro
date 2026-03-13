@@ -1,0 +1,11 @@
+---
+import Layout from "#layouts/Layout.astro";
+import ProjectGlobal from "#pods/projects/project-global.astro";
+
+import { basics } from "#data/info.json";
+const { name, label } = basics;
+---
+<Layout title={`Proyectos de ${name} • ${label}`}>
+  <ProjectGlobal />  
+</Layout>
+

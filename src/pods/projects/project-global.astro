@@ -1,0 +1,113 @@
+---
+import Section from "#components/Section.astro";
+import Data from "#assets/icons/Data.astro";
+import Github from "#assets/icons/Github.astro";
+import Globe from "#assets/icons/Globe.astro";
+
+import { PROJECTS } from "#data/projects.js";
+const projects = PROJECTS.filter((project) => !project.hidden)
+  .slice()
+  .reverse();
+---
+
+<Section>
+  <section class="flex flex-col flex-1 gap-6 md:gap-8">
+    <h3
+      class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+    >
+      <Data />
+      <span>|</span> Explorar proyectos:
+    </h3>
+
+    <div
+      class="grid max-w-175 gap-6 grid-cols-1 justify-center sm:grid-cols-2 md:grid-cols-3"
+    >
+      <article
+        class="border border-[rgb(var(--color),0.10)] bg-[rgb(var(--light),0.15)] dark:bg-[rgb(var(--dark))] backdrop-blur-2xl rounded-xl p-4 min-h-40"
+      >
+        <a
+          href="#"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center justify-center h-full text-sm font-light tracking-tighter transition-all duration-200 opacity-65 [&>svg]:size-12 hover:opacity-100 hover:scale-110"
+        >
+          <Github />
+          Próximamente en <strong>GitHub</strong> siguiente proyecto...
+        </a>
+      </article>
+      {
+        projects.map((project, reversedIndex) => {
+          const index = projects.length - reversedIndex - 1;
+          const num = `${index + 1}`.padStart(2, "0");
+          return (
+            <article class="group border border-[rgb(var(--color),0.10)] rounded-xl bg-[rgb(var(--light))] dark:bg-[rgb(var(--dark))] min-h-40 p-2 ">
+              <div class="flex flex-col h-full ">
+                <div class="relative aspect-video overflow-hidden rounded-xl mb-4 ">
+                  <span class="absolute z-2 text-xl text-[rgb(var(--light))] font-extrabold font-inter tracking-tighter top-6 left-6 -rotate-12 transition duration-200 opacity-80 group-hover:scale-[1.5] group-hover:opacity-100 text-shadow-[0_0_4px_rgb(var(--dark),0.85)]">
+                    #{num}
+                  </span>
+                  <img
+                    src={`/projects/images/${num}.webp`}
+                    alt={project.title}
+                    class="size-full rounded-xl object-cover transition-all duration-300 group-hover:scale-[1.06] grayscale group-hover:grayscale-0 "
+                  />
+                </div>
+
+                <div class="flex flex-col flex-1 justify-between gap-2 px-1 pb-1">
+                  <div class="flex flex-col gap-2">
+                    <a
+                      href={`/${project.slug}`}
+                      title={`Ver proyecto ${project.title}`}
+                      class=""
+                    >
+                      <h4 class="text-base text-[rgb(var(--color),0.85)] font-medium tracking-tighter leading-tight transition-all duration-300 group-hover:text-secondary-500 ">
+                        {project.title}
+                      </h4>
+                    </a>
+
+                    <p class=" font-inter text-sm font-light tracking-tighter leading-tight text-pretty text-[rgb(var(--color),0.65)]">
+                      {project.description}
+                    </p>
+
+                    <ul class="flex flex-wrap gap-1">
+                      {project.learnings.map((learning) => (
+                        <li class="font-inconsolata font-light text-[10px] tracking-tight px-0.5 text-[rgb(var(--color),0.65)] ">
+                          {learning}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div class="flex items-center gap-2 ">
+                    <button class="border border-[rgb(var(--color),0.25)] bg-[rgb(var(--light))] dark:bg-[rgb(var(--dark))] rounded-xl px-1.5 py-0.5 hover:border-secondary-500/45 ">
+                      <a
+                        href={`https://github.com/Edirju/devweb-social/tree/main/public/projects/${project.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={`Ver repositorio del proyecto ${project.title} en GitHub`}
+                        class="flex items-center justify-center gap-1 text-xs uppercase font-inconsolata font-light [&>svg]:size-4  hover:text-secondary-500 "
+                      >
+                        <Github />
+                        <span>repo</span>
+                      </a>
+                    </button>
+
+                    <button class="border border-[rgb(var(--color),0.25)] bg-[rgb(var(--light))] dark:bg-[rgb(var(--dark))] rounded-xl px-1.5 py-0.5 hover:border-tertiary-500/45 ">
+                      <a
+                        href={`/${project.slug}`}
+                        title={`Ver demo del proyecto ${project.title}`}
+                        class="flex items-center justify-center gap-1 text-xs uppercase font-inconsolata font-light [&>svg]:size-4 hover:text-tertiary-500  "
+                      >
+                        <Globe />
+                        <span>demo</span>
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </section>
+</Section>

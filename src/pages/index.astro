@@ -5,6 +5,7 @@ import Grid from "#components/Grid.astro";
 import Hero from "#components/Hero.astro";
 import PostFeature from "#pods/post-collection/post-feature.pod.astro";
 import SkillsCollection from "#pods/sliders/skills-collection.astro";
+import ProjectsFeatures from "#pods/projects/project-features.astro"
 
 import { basics } from "#data/info.json";
 const { name, label } = basics;
@@ -28,6 +29,8 @@ const { name, label } = basics;
 	
 	<Section>
 		<PostFeature />
+		<hr class="my-10 border-t border-[rgb(var(--color),0.08)]" />
+		<ProjectsFeatures />
 	</Section>
 	
 </Layout>

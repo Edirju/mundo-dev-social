@@ -1,6 +1,7 @@
 ---
 import type { Post } from "#pods/post-collection/post.collection.model.ts";
 import Heart from "#assets/icons/Heart.astro";
+import MarkdownRenderer from "#components/MarkdownRenderer.astro";
 
 interface Props {
   entry: Post;
@@ -19,7 +20,7 @@ const { entry, likeCount, minReadText } = Astro.props;
   </h1>
 
   <div
-    class="flex items-center justify-between gap-4 font-inconsolata font-light text-sm"
+    class="flex items-center justify-between gap-4 font-inconsolata font-light text-sm border-y border-[rgb(var(--color),0.12)] p-2  "
   >
     <p>{entry.readTime} {minReadText}</p>
     <div class="flex items-center gap-1.5 [&>svg]:size-4">
@@ -28,6 +29,7 @@ const { entry, likeCount, minReadText } = Astro.props;
     </div>
   </div>
   
+  <MarkdownRenderer content={entry.content} />
 
 </section>
 

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Clamp CSS App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path
+            d="M20.4668 8.69379L20.7134 8.12811C21.1529 7.11947 21.9445 6.31641 22.9323 5.87708L23.6919 5.53922C24.1027 5.35653 24.1027 4.75881 23.6919 4.57612L22.9748 4.25714C21.9616 3.80651 21.1558 2.97373 20.7238 1.93083L20.4706 1.31953C20.2942 0.893489 19.7058 0.893489 19.5293 1.31953L19.2761 1.93083C18.8442 2.97373 18.0384 3.80651 17.0252 4.25714L16.308 4.57612C15.8973 4.75881 15.8973 5.35653 16.308 5.53922L17.0677 5.87708C18.0555 6.31641 18.8471 7.11947 19.2866 8.12811L19.5331 8.69379C19.7136 9.10792 20.2864 9.10792 20.4668 8.69379ZM2 4C2 3.44772 2.44772 3 3 3H14V5H4V19H20V11H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4ZM7 8H17V11H15V10H13V14H14.5V16H9.5V14H11V10H9V11H7V8Z">
+          </path>
+        </svg>
+        CSS clamp() Mágico.
+      </h2>
+      <p>Genera tipografías responsivas perfectas con la <strong>función clamp()</strong>. Introduce tus
+        <strong>valores</strong>
+        y obtén el código CSS listo para
+        usar.
+      </p>
+    </header>
+
+    <section class="main-content">
+      <article class="card">
+        <h3>Configuración de Fuente</h3>
+        <div class="input-group">
+          <div class="input-field">
+            <label>Tamaño Mínimo</label>
+            <div class="input-container">
+              <input type="number" id="minFont" value="16" min="8" max="100">
+              <span class="unit-label" id="minFontUnit">px</span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label>Tamaño Máximo</label>
+            <div class="input-container">
+              <input type="number" id="maxFont" value="24" min="8" max="200">
+              <span class="unit-label" id="maxFontUnit">px</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-group">
+          <button class="toggle-btn active" id="pxBtn">PX</button>
+          <button class="toggle-btn" id="remBtn">REM</button>
+        </div>
+
+        <div class="base-config">
+          <label>Base:</label>
+          <div class="input-container">
+            <input type="number" id="baseSize" value="16" min="10" max="24">
+            <span class="unit-label">px</span>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Configuración de Viewport</h3>
+
+        <div class="input-group">
+          <div class="input-field">
+            <label>Viewport Mínimo</label>
+            <div class="input-container">
+              <input type="number" id="minViewport" value="320" min="200" max="1000">
+              <span class="unit-label">px</span>
+            </div>
+          </div>
+
+          <div class="input-field">
+            <label>Viewport Máximo</label>
+            <div class="input-container">
+              <input type="number" id="maxViewport" value="1200" min="500" max="2000">
+              <span class="unit-label">px</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="result-section">
+      <div class="result-item">
+        <h3>Función Clamp()</h3>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyToClipboard('clampResult')">Copiar</button>
+          <code id="clampResult">clamp(1rem, 2.5vw, 1.5rem)</code>
+        </div>
+      </div>
+
+      <div class="result-item">
+        <h3>CSS Completo</h3>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyToClipboard('cssResult')">Copiar</button>
+          <code id="cssResult">font-size: clamp(1rem, 2.5vw, 1.5rem);</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <h2>Vista Previa</h2>
+      <div class="preview-text" id="previewText" style="font-size: clamp(1rem, 2.5vw, 1.5rem);">
+        Este texto usa la función clamp() generada
+      </div>
+      <div class="viewport-info">
+        Ancho actual: <span id="currentWidth">0</span>px
+      </div>
+      <input type="range" class="viewport-slider" id="viewportSlider" min="320" max="1200" value="800">
+    </section>
+  </main>
+</body>
+
+</html>
+
+<style>
+  :root {
+    --primary: 240, 145, 70;
+    /* #f09146 */
+    --secondary: 18, 26, 40;
+    /* #121a28 */
+    --accent: 162, 48, 4;
+    /* #a23004 */
+    --dark: 30, 37, 44;
+    /* #1e252c */
+    --light: 255, 254, 254;
+    /*#FFFEFE*/
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: -0.05em;
+    color: rgb(var(--dark), 0.85);
+    /*background: linear-gradient(135deg, #667eea 0%, #764eea 100%);*/
+    min-height: 100dvh;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: clamp(1.5rem, 1.1364rem + 1.8182vw, 2.5rem);
+      font-weight: 700;
+      text-shadow: 0 0 8px rgb(var(--dark), 0.35);
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: clamp(1rem, 0.9091rem + 0.4545vw, 1.25rem);
+      color: rgb(var(--dark), 0.65);
+      text-align: center;
+      text-wrap: pretty;
+    }
+
+    strong {
+      color: rgb(var(--accent), 0.85);
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      text-shadow: 0 0 4px rgb(var(--dark), 0.35);
+    }
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*repeat(auto-fit, minmax(100%, 300px), 1fr)*/
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+  }
+  .card {
+    background: rgb(var(--light));
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgb(var(--dark), 0.05);
+    box-shadow: 0 8px 32px rgb(var(--dark), 0.25);
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: rgb(var(--accent), 0.85);
+    }
+
+  }
+
+  .input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: .5rem;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      background: rgb(var(--light));
+
+      &:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgb(102, 126, 234, 0.1);
+      }
+    }
+
+    .unit-label {
+      position: absolute;
+      right: 1rem;
+      color: #a0aec0;
+      font-size: 0.875rem;
+      font-weight: 500;
+      pointer-events: none;
+      width: 10%;
+    }
+  }
+
+  .toggle-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    .toggle-btn {
+      flex: 1;
+      padding: 0.75rem;
+      background: rgb(var(--dark), 0.15);
+      border-radius: .5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: none;
+
+      &.active {
+        background: #667eea;
+        color: rgb(var(--light));
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .base-config {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .result-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .result-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+
+  .code-block {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    color: #2d3748;
+    position: relative;
+    overflow-x: auto;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .copy-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+  }
+
+  .copy-btn.copied {
+    background: #48bb78;
+  }
+
+  .preview-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2rem;
+  }
+
+  .preview-text {
+    text-align: center;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    transition: font-size 0.3s ease;
+  }
+
+  .viewport-info {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 1rem;
+  }
+
+  .viewport-slider {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .main-content {
+      grid-template-columns: 1fr;
+    }
+
+    .input-group {
+      grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Referencias a elementos
+  const elements = {
+    minFont: document.getElementById('minFont'),
+    maxFont: document.getElementById('maxFont'),
+    minViewport: document.getElementById('minViewport'),
+    maxViewport: document.getElementById('maxViewport'),
+    baseSize: document.getElementById('baseSize'),
+    pxBtn: document.getElementById('pxBtn'),
+    remBtn: document.getElementById('remBtn'),
+    clampResult: document.getElementById('clampResult'),
+    cssResult: document.getElementById('cssResult'),
+    previewText: document.getElementById('previewText'),
+    currentWidth: document.getElementById('currentWidth'),
+    viewportSlider: document.getElementById('viewportSlider'),
+    minFontUnit: document.getElementById('minFontUnit'),
+    maxFontUnit: document.getElementById('maxFontUnit')
+  };
+  // Optimizaciones de rendimiento
+  class ClampCalculator {
+    constructor() {
+      this.cache = new Map()
+      this.maxCacheSize = 100
+      this.currentUnit = 'px'
+      this.debounceTimer = null
+    }
+    // Función de precisión matemática
+    preciseRound(number, decimals) {
+      const factor = Math.pow(10, decimals);
+      return Math.round(number * factor) / factor;
+    }
+    // Validación temprana de inputs
+    validateInputs(inputs) {
+      const errors = [];
+
+      if (inputs.minFont <= 0) errors.push('El tamaño mínimo debe ser positivo');
+      if (inputs.maxFont <= 0) errors.push('El tamaño máximo debe ser positivo');
+      if (inputs.minViewport <= 0) errors.push('El viewport mínimo debe ser positivo');
+      if (inputs.maxViewport <= 0) errors.push('El viewport máximo debe ser positivo');
+      if (inputs.minViewport >= inputs.maxViewport) errors.push('El viewport mínimo debe ser menor al máximo');
+      if (inputs.baseSize <= 0) errors.push('El tamaño base debe ser positivo');
+
+      return errors;
+    }
+    // Crear clave de cache optimizada
+    createCacheKey(inputs) {
+      return `${inputs.minFont}|${inputs.maxFont}|${inputs.minViewport}|${inputs.maxViewport}|${inputs.unit}|${inputs.baseSize}`;
+    }
+    // Cálculo optimizado de slope
+    calculateSlope(minFont, maxFont, minViewport, maxViewport) {
+      const fontDiff = maxFont - minFont;
+      const viewportDiff = maxViewport - minViewport;
+
+      if (viewportDiff === 0) return 0;
+
+      return this.preciseRound(fontDiff / viewportDiff, 8);
+    }
+    // Cálculo optimizado de intersección Y
+    calculateYIntercept(minFont, minViewport, slope) {
+      return this.preciseRound(minFont - (minViewport * slope), 8);
+    }
+    // Cálculo principal con cache
+    calculate(inputs) {
+      const cacheKey = this.createCacheKey(inputs);
+
+      if (this.cache.has(cacheKey)) {
+        return this.cache.get(cacheKey);
+      }
+
+      const errors = this.validateInputs(inputs);
+      if (errors.length > 0) {
+        return { error: errors };
+      }
+
+      const slope = this.calculateSlope(
+        inputs.minFont,
+        inputs.maxFont,
+        inputs.minViewport,
+        inputs.maxViewport
+      );
+
+      const yAxisIntersection = this.calculateYIntercept(
+        inputs.minFont,
+        inputs.minViewport,
+        slope
+      );
+
+      const result = this.generateClampFunction(inputs, slope, yAxisIntersection);
+
+      // Gestión de cache
+      this.cache.set(cacheKey, result);
+      if (this.cache.size > this.maxCacheSize) {
+        const firstKey = this.cache.keys().next().value;
+        this.cache.delete(firstKey);
+      }
+
+      return result;
+    }
+    // Generación optimizada de función clamp
+    generateClampFunction(inputs, slope, yAxisIntersection) {
+      let clampFunction;
+
+      if (inputs.unit === 'px') {
+        const slopeVw = this.preciseRound(slope * 100, 4);
+        clampFunction = `clamp(${inputs.minFont}px, ${yAxisIntersection}px + ${slopeVw}vw, ${inputs.maxFont}px)`;
+      } else {
+        const minRem = this.preciseRound(inputs.minFont / inputs.baseSize, 4);
+        const maxRem = this.preciseRound(inputs.maxFont / inputs.baseSize, 4);
+        const yAxisRem = this.preciseRound(yAxisIntersection / inputs.baseSize, 4);
+        const slopeVw = this.preciseRound(slope * 100, 4);
+        clampFunction = `clamp(${minRem}rem, ${yAxisRem}rem + ${slopeVw}vw, ${maxRem}rem)`;
+      }
+
+      return {
+        clamp: clampFunction,
+        css: `font-size: ${clampFunction};`,
+        slope: slope,
+        yIntercept: yAxisIntersection
+      };
+    }
+
+    // Debounce para evitar cálculos excesivos
+    generateClampDebounced(callback) {
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(() => {
+        callback();
+      }, 50);
+    }
+  }
+
+  // Instancia del calculador
+  const calculator = new ClampCalculator();
+
+  // Función para obtener inputs
+  function getInputs() {
+    return {
+      minFont: parseFloat(elements.minFont.value) || 16,
+      maxFont: parseFloat(elements.maxFont.value) || 24,
+      minViewport: parseFloat(elements.minViewport.value) || 320,
+      maxViewport: parseFloat(elements.maxViewport.value) || 1200,
+      baseSize: parseFloat(elements.baseSize.value) || 16,
+      unit: calculator.currentUnit
+    };
+  }
+  // Actualización optimizada del DOM
+  function updateDOM(results) {
+    if (results.error) {
+      console.warn('Errores de validación:', results.error);
+      return;
+    }
+
+    // Batch DOM updates
+    requestAnimationFrame(() => {
+      elements.clampResult.textContent = results.clamp;
+      elements.cssResult.textContent = results.css;
+      elements.previewText.style.fontSize = results.clamp;
+    });
+  }
+
+  // Función principal optimizada
+  function generateClamp() {
+    calculator.generateClampDebounced(() => {
+      const inputs = getInputs();
+      const results = calculator.calculate(inputs);
+      updateDOM(results);
+      updateSliderRange();
+    });
+  }
+  // Event listeners con delegación
+  [elements.minFont, elements.maxFont, elements.minViewport, elements.maxViewport, elements.baseSize].forEach(input => {
+    input.addEventListener('input', generateClamp);
+  });
+
+  elements.pxBtn.addEventListener('click', () => setUnit('px'));
+  elements.remBtn.addEventListener('click', () => setUnit('rem'));
+  elements.viewportSlider.addEventListener('input', updatePreview);
+
+  function setUnit(unit) {
+    calculator.currentUnit = unit;
+    elements.pxBtn.classList.toggle('active', unit === 'px');
+    elements.remBtn.classList.toggle('active', unit === 'rem');
+    elements.minFontUnit.textContent = unit;
+    elements.maxFontUnit.textContent = unit;
+    generateClamp();
+  }
+
+  function updateSliderRange() {
+    const inputs = getInputs();
+    elements.viewportSlider.min = inputs.minViewport;
+    elements.viewportSlider.max = inputs.maxViewport;
+    elements.viewportSlider.value = Math.min(Math.max(elements.viewportSlider.value, inputs.minViewport), inputs.maxViewport);
+    updatePreview();
+  }
+
+  function updatePreview() {
+    const width = elements.viewportSlider.value;
+    elements.currentWidth.textContent = width;
+
+    // Simular el ancho del viewport
+    const container = document.querySelector('.preview-section');
+    const maxWidth = Math.min(width, window.innerWidth - 40);
+    container.style.width = `${maxWidth}px`;
+  }
+
+  // Función optimizada de copia al portapapeles
+  async function copyToClipboard(elementId) {
+    const element = document.getElementById(elementId);
+    const text = element.textContent;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      showCopyFeedback(element);
+    } catch (err) {
+      // Fallback para navegadores sin soporte
+      fallbackCopyToClipboard(text, element);
+    }
+  }
+
+  function showCopyFeedback(element) {
+    const btn = element.parentElement.querySelector('.copy-btn');
+    const originalText = btn.textContent;
+
+    btn.textContent = 'Copiado!';
+    btn.classList.add('copied');
+
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.classList.remove('copied');
+    }, 2000);
+  }
+
+  function fallbackCopyToClipboard(text, element) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      document.execCommand('copy');
+      showCopyFeedback(element);
+    } catch (err) {
+      console.error('Error al copiar:', err);
+    }
+
+    document.body.removeChild(textArea);
+  }
+
+  // Throttled window resize handler
+  let resizeTimeout;
+  function handleResize() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      elements.currentWidth.textContent = window.innerWidth;
+    }, 100);
+  }
+
+  // Inicialización optimizada
+  function initialize() {
+    generateClamp();
+    updatePreview();
+    elements.currentWidth.textContent = window.innerWidth;
+
+    // Event listener optimizado para resize
+    window.addEventListener('resize', handleResize, { passive: true });
+  }
+
+  // Inicializar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+  } else {
+    initialize();
+  }
+
+</script>
+
+<!-- <script>
+  // Referencias a elementos
+  const minFont = document.getElementById('minFont');
+  const maxFont = document.getElementById('maxFont');
+  const minViewport = document.getElementById('minViewport');
+  const maxViewport = document.getElementById('maxViewport');
+  const baseSize = document.getElementById('baseSize');
+  const pxBtn = document.getElementById('pxBtn');
+  const remBtn = document.getElementById('remBtn');
+  const clampResult = document.getElementById('clampResult');
+  const cssResult = document.getElementById('cssResult');
+  const previewText = document.getElementById('previewText');
+  const currentWidth = document.getElementById('currentWidth');
+  const viewportSlider = document.getElementById('viewportSlider');
+  const minFontUnit = document.getElementById('minFontUnit');
+  const maxFontUnit = document.getElementById('maxFontUnit');
+
+  let currentUnit = 'px';
+
+  // Event listeners
+  [minFont, maxFont, minViewport, maxViewport, baseSize].forEach(input => {
+    input.addEventListener('input', generateClamp);
+  });
+
+  pxBtn.addEventListener('click', () => setUnit('px'));
+  remBtn.addEventListener('click', () => setUnit('rem'));
+  viewportSlider.addEventListener('input', updatePreview);
+
+  function setUnit(unit) {
+    currentUnit = unit;
+    pxBtn.classList.toggle('active', unit === 'px');
+    remBtn.classList.toggle('active', unit === 'rem');
+    minFontUnit.textContent = unit;
+    maxFontUnit.textContent = unit;
+    generateClamp();
+  }
+
+  function generateClamp() {
+    const minFontValue = parseFloat(minFont.value);
+    const maxFontValue = parseFloat(maxFont.value);
+    const minViewportValue = parseFloat(minViewport.value);
+    const maxViewportValue = parseFloat(maxViewport.value);
+    const baseSizeValue = parseFloat(baseSize.value);
+
+    // Convertir a rem si es necesario
+    let minFontFinal = minFontValue;
+    let maxFontFinal = maxFontValue;
+
+    if (currentUnit === 'rem') {
+      minFontFinal = minFontValue;
+      maxFontFinal = maxFontValue;
+    }
+
+    // Calcular el valor fluido
+    const slope = (maxFontFinal - minFontFinal) / (maxViewportValue - minViewportValue);
+    const yAxisIntersection = -minViewportValue * slope + minFontFinal;
+
+    // Generar la función clamp
+    let clampFunction;
+    if (currentUnit === 'px') {
+      clampFunction = `clamp(${minFontFinal}px, ${yAxisIntersection.toFixed(4)}px + ${(slope * 100).toFixed(4)}vw, ${maxFontFinal}px)`;
+    } else {
+      const minRem = (minFontFinal / baseSizeValue).toFixed(4);
+      const maxRem = (maxFontFinal / baseSizeValue).toFixed(4);
+      const yAxisRem = (yAxisIntersection / baseSizeValue).toFixed(4);
+      clampFunction = `clamp(${minRem}rem, ${yAxisRem}rem + ${(slope * 100).toFixed(4)}vw, ${maxRem}rem)`;
+    }
+
+    // Actualizar resultados
+    clampResult.textContent = clampFunction;
+    cssResult.textContent = `font-size: ${clampFunction};`;
+
+    // Actualizar preview
+    previewText.style.fontSize = clampFunction;
+    updateSliderRange();
+  }
+
+  function updateSliderRange() {
+    const min = parseFloat(minViewport.value);
+    const max = parseFloat(maxViewport.value);
+    viewportSlider.min = min;
+    viewportSlider.max = max;
+    viewportSlider.value = Math.min(Math.max(viewportSlider.value, min), max);
+    updatePreview();
+  }
+
+  function updatePreview() {
+    const width = viewportSlider.value;
+    currentWidth.textContent = width;
+
+    // Simular el ancho del viewport
+    const container = document.querySelector('.preview-section');
+    container.style.width = `${Math.min(width, window.innerWidth - 40)}px`;
+  }
+
+  function copyToClipboard(elementId) {
+    const element = document.getElementById(elementId);
+    const text = element.textContent;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = element.parentElement.querySelector('.copy-btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Copiado!';
+      btn.classList.add('copied');
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // Inicializar
+  generateClamp();
+  updatePreview();
+
+  // Actualizar ancho actual en resize
+  window.addEventListener('resize', () => {
+    currentWidth.textContent = window.innerWidth;
+  });
+
+  // Mostrar ancho inicial
+  currentWidth.textContent = window.innerWidth;
+</script> -->
