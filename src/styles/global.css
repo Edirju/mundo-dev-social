@@ -80,6 +80,7 @@
 	background: var(--hdr-gradient);
 	/* Various */
 	--gap: 1rem;
+	--bg-size: 200%;
 }
 
 :root.dark {

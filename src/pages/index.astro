@@ -5,32 +5,40 @@ import Grid from "#components/Grid.astro";
 import Hero from "#components/Hero.astro";
 import PostFeature from "#pods/post-collection/post-feature.pod.astro";
 import SkillsCollection from "#pods/sliders/skills-collection.astro";
-import ProjectsFeatures from "#pods/projects/project-features.astro"
+import ProjectsFeatures from "#pods/projects/project-features.astro";
 
 import { basics } from "#data/info.json";
 const { name, label } = basics;
 ---
 
-<Layout title={`Portafolio de ${name} • ${label}`}>			
-	<Hero ariaLabelledby="hero-title">
-		<div class="flex flex-col justify-center gap-4 text-center text-[rgb(var(--color),0.85)]">
-			<h1 id="hero-title" class="text-3xl font-semibold capitalize tracking-tight leading-[1.05] text-pretty [&>span]:font-extralight [&>span]:text-4xl text-transparent bg-clip-text bg-linear-to-r from-[rgb(var(--color),0.85)] to-secondary-900/85 text-shadow-[0_0_4px_rgb(var(--color),0.25)] ">
-				desarrollo web <span>&</span> social media <span>+</span> opinión.
-			</h1>
-			<p class="text-[rgb(var(--color),0.75)] text-xl font-light tracking-tighter leading-[1.3] m-auto max-w-[40ch] [&>strong]:font-medium [&>strong]:text-shadow-[0_0_4px_rgb(var(--color),0.15)]">
-				Exploro <strong>desarrollo web</strong>, <strong>tecnología</strong> y gestion de <strong>social media</strong>. Comparto mis <strong>opiniones</strong> y trabajos.
-			</p>
-		</div>
-	</Hero>
-	
-	<Section>
-		<SkillsCollection />
-	</Section>
-	
-	<Section>
-		<PostFeature />
-		<hr class="my-10 border-t border-[rgb(var(--color),0.08)]" />
-		<ProjectsFeatures />
-	</Section>
-	
+<Layout title={`Portafolio de ${name} • ${label}`}>
+  <Hero ariaLabelledby="hero-title">
+    <div
+      class="flex flex-col justify-center gap-4 text-center text-[rgb(var(--color),0.85)]"
+    >
+      <h1
+        id="hero-title"
+        class="text-3xl font-semibold capitalize tracking-tight leading-[1.05] text-pretty [&>span]:font-extralight [&>span]:text-4xl text-transparent bg-clip-text bg-linear-to-r from-[rgb(var(--color),0.85)] to-secondary-500 text-shadow-[0_0_4px_rgb(var(--color),0.25)]"
+      >
+        desarrollo web <span>&</span> social media <span>+</span> opinión.
+      </h1>
+      <p
+        class="text-[rgb(var(--color),0.75)] text-xl font-light tracking-tighter leading-[1.3] m-auto max-w-[40ch] [&>strong]:font-medium [&>strong]:text-shadow-[0_0_4px_rgb(var(--color),0.15)] "
+      >
+        Exploro <strong>desarrollo web</strong>, <strong>tecnología</strong> y gestion
+        de <strong>social media</strong>. Comparto mis <strong>opiniones</strong
+        > y trabajos.
+      </p>
+    </div>
+  </Hero>
+
+  <Section>
+    <SkillsCollection />
+  </Section>
+
+  <Section>
+    <PostFeature />
+    <hr class="my-10 border-t border-[rgb(var(--color),0.08)]" />
+    <ProjectsFeatures />
+  </Section>
 </Layout>
