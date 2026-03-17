@@ -1,0 +1,310 @@
+---
+import Html5 from "#assets/icons/Html5.astro";
+import Css3 from "#assets/icons/Css3.astro";
+import Javascript from "#assets/icons/Javascript.astro";
+import AstroJS from "#assets/icons/AstroJS.astro";
+import React from "#assets/icons/React.astro";
+import TailwindCss from "#assets/icons/TailwindCss.astro";
+import Gemini from "#assets/icons/Gemini.astro";
+import Figma from "#assets/icons/Figma.astro";
+import ChatGpt from "#assets/icons/ChatGpt.astro";
+import Notion from "#assets/icons/Notion.astro";
+import Trello from "#assets/icons/Trello.astro";
+import Tools from "#assets/icons/Tools.astro";
+import Brain from "#assets/icons/Brain.astro";
+import User from "#assets/icons/User.astro";
+import Info from "#assets/icons/Info.astro";
+
+const SKILLS_ICON: Record<string, any> = {
+  Html5,
+  Css3,
+  Javascript,
+  AstroJS,
+  React,
+  TailwindCss,
+  Gemini,
+  Figma,
+  ChatGpt,
+  Notion,
+  Trello,
+  Tools,
+  Brain,
+};
+
+const skills1 = [
+  { name: "Figma", icon: "Figma" },
+  { name: "Gemini", icon: "Gemini" },
+  { name: "ChatGpt", icon: "ChatGpt" },
+];
+const skills2 = [
+  { name: "React", icon: "React" },
+  { name: "Tailwind", icon: "TailwindCss" },
+  { name: "Astro", icon: "AstroJS" },
+  { name: "HTML5", icon: "Html5" },
+];
+const skills3 = [
+  { name: "JS", icon: "Javascript" },
+  { name: "Notion", icon: "Notion" },
+  { name: "Trello", icon: "Trello" },
+  { name: "Tools", icon: "Tools" },
+  { name: "Brain", icon: "Brain" },
+];
+
+const orbits = [
+  { skills: skills1, radius: 120, duration: 14, reverse: false },
+  { skills: skills2, radius: 200, duration: 22, reverse: true },
+  { skills: skills3, radius: 290, duration: 32, reverse: false },
+];
+---
+
+<section
+  class="w-full border border-[rgb(var(--color),0.03)] bg-[rgb(var(--light),0.08)] dark:bg-[rgb(var(--dark),0.10)] backdrop-blur-2xl backdrop-saturate-100 rounded-xl shadow-[0_0_12px_rgb(var(--color),0.04)]"
+>
+  <div class="content-wrapper flex items-center gap-8 relative overflow-hidden">
+    <div class="flex-[1_1_0] min-w-0 flex flex-col gap-4 px-4 py-6">
+      <span
+        class="inline-block text-[rgb(var(--color),0.85)] text-[10px] font-inter font-medium tracking-tighter leading-tight bg-[rgb(var(--light),0.45)] dark:bg-[rgb(var(--dark),0.45)] uppercase py-1 px-2 border border-[rgb(var(--color),0.05)] rounded-md w-fit shadow-[0_0_4px_rgb(var(--color),0.10)]"
+      >
+        <strong>+50</strong> Proyectos
+      </span>
+
+      <h2
+        class="text-2xl leading-[1.1] m-0 font-semibold text-[rgb(var(--color),0.85)]"
+      >
+        <span class="tracking-tight">Aprendizaje constante</span>
+        <br />
+        <span class="opacity-65 font-medium tracking-tight">en cada</span>
+        <strong class="font-bold text-3xl tracking-tighter text-secondary-500"
+          >Proyecto</strong>.
+      </h2>
+
+      <p
+        class="font-inconsolata text-sm opacity-65 leading-relaxed m-0 font-light tracking-tight text-pretty"
+      >
+        El objetivo es mejorar habilidades de desarrollo web y tecnología. Compartiendo conocimientos y trabajos para ayudar a otros a alcanzar sus metas.
+      </p>
+
+      <div class="stats flex items-center gap-4 flex-wrap">
+        <div class="stat-item flex items-center gap-2">
+          <div
+            class="stat-icon flex items-center justify-center size-8 border border-[rgb(var(--color),0.10)] rounded-lg text-secondary-500/85 shrink-0 shadow-[0_0_8px_rgb(var(--color),0.1)] [&>svg]:size-5"
+          >
+            <User />
+          </div>
+          <div>
+            <span
+              class="block text-sm font-medium text-[rgb(var(--color),0.75)] leading-tight"
+            >
+              +50hrs
+            </span>
+            <span
+              class="stat-label block text-xs font-light opacity-65 leading-tight -mt-0.5"
+              >Prácticas</span
+            >
+          </div>
+        </div>
+        <div class="stat-divider w-px h-8 bg-[rgb(var(--color),0.15)] shrink-0">
+        </div>
+        <div class="stat-item flex items-center gap-2">
+          <div
+            class="stat-icon flex items-center justify-center size-8 border border-[rgb(var(--color),0.10)] rounded-lg text-secondary-500/85 shrink-0 shadow-[0_0_8px_rgb(var(--color),0.1)] [&>svg]:size-5"
+          >
+            <Info />
+          </div>
+          <div>
+            <span
+              class="block text-sm font-medium text-[rgb(var(--color),0.75)] leading-tight"
+              >+Contenido</span
+            >
+            <span
+              class="stat-label block text-xs font-light opacity-65 leading-tight -mt-0.5"
+              >de Calidad</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orbit-col">
+      <div class="orbit-scene">
+        <div class="center-dot"></div>
+        {
+          orbits.map(({ skills, radius, duration, reverse }) => (
+            <div
+              class={`orbit-ring ${reverse ? "reverse" : ""} `}
+              style={`--radius:${radius}px; --duration:${duration}s; --orbit-size:${radius * 2}px`}
+            >
+              <ul class="orbit-list">
+                {skills.map(({ name, icon }, index) => {
+                  const Icon = SKILLS_ICON[icon];
+                  return Icon ? (
+                    <li
+                      class="orbit-item"
+                      style={`--index:${index}; --total:${skills.length}; --angle:${(index / skills.length) * 360}deg`}
+                    >
+                      <div
+                        class={`icon-wrapper ${reverse ? "upright-reverse" : "upright-normal"}`}
+                        style={`--duration:${duration}s;`}
+                      >
+                        <Icon />
+                        <span class="sr-only">{name}</span>
+                      </div>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .orbit-col {
+    flex: 0 0 300px;
+    width: 300px;
+    align-self: stretch;
+    position: relative;
+
+    mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      rgb(var(--color)) 40%,
+      transparent 100%
+    );
+  }
+
+  .orbit-scene {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 640px;
+    height: 640px;
+    transform: translate(50%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .center-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d1d5db;
+    z-index: 2;
+  }
+
+  .orbit-ring {
+    position: absolute;
+    width: var(--orbit-size);
+    height: var(--orbit-size);
+    border-radius: 50%;
+    border: 1px dashed #e5e7eb;
+    animation: spin var(--duration) linear infinite;
+  }
+
+  .orbit-ring.reverse {
+    animation-direction: reverse;
+  }
+
+  .orbit-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .orbit-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: rotate(calc((var(--index) / var(--total)) * 360deg))
+      translateY(calc(var(--radius) * -1));
+  }
+
+  .icon-wrapper {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+  }
+  .icon-wrapper.upright-normal {
+    animation: upright-ccw var(--duration) linear infinite;
+  }
+  .icon-wrapper.upright-reverse {
+    animation: upright-cw var(--duration) linear infinite;
+  }
+
+  .icon-wrapper :global(svg) {
+    width: 1rem;
+    height: 1rem;
+    color: #6b7280;
+  }
+
+  /* Keyframes */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes upright-ccw {
+    from {
+      /* transform: translate(-50%, -50%) rotate(0deg); */
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
+    }
+    to {
+      /* transform: translate(-50%, -50%) rotate(-360deg); */
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 + 360deg));
+    }
+  }
+
+  @keyframes upright-cw {
+    from {
+      /* transform: translate(-50%, -50%) rotate(0deg); */
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1));
+    }
+    to {
+      /* transform: translate(-50%, -50%) rotate(360deg); */
+      transform: translate(-50%, -50%) rotate(calc(var(--angle) * -1 + 360deg));
+    }
+  }
+
+  @media (max-width: 520px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+
+    .orbit-col {
+      flex: 0 0 220px;
+      width: 100%;
+      height: 220px;
+    }
+
+    .orbit-scene {
+      width: 480px;
+      height: 480px;
+    }
+    /* .orbit-scene {
+      width: 320px;
+      height: 320px;
+      transform: scale(0.55);
+      transform-origin: top center;
+      margin-bottom: -14rem;
+    } */
+  }
+</style>

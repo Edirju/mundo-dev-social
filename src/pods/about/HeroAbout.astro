@@ -1,0 +1,76 @@
+---
+import Section from "#components/Section.astro";
+import Avatar from "#assets/img-01.webp";
+import { Image } from "astro:assets";
+
+const heroContent = {
+  heading: "Acerca",
+  textCol1: "desarrollo web & social media.",
+  textCol2:
+    "El objetivo es reunir a mentes diversas y convertir las ideas en experiencias que marquen la diferencia.",
+  textCol3:
+    "Me apasiona crear experiencias web increíbles con tecnologías modernas. Me encanta compartir conocimientos a través de artículos y talleres.",
+  image: Avatar,
+  title: "Edinson Rivera",
+  subtitle: "Creative Director",
+};
+---
+
+<section class="w-full mx-auto">
+  <h3
+    class="text-2xl font-semibold tracking-tight mb-6 md:mb-8 text-shadow-[0_0_8px_rgb(var(--color),0.25)]"
+  >
+    {heroContent.heading}
+  </h3>
+
+  <div class="flex flex-col-reverse md:flex-row md:items-start gap-8 md:gap-6">
+    <!-- Column 1: Label -->
+    <div class="hidden md:block md:w-25 shrink-0">
+      <p
+        class="text-sm font-inter font-medium text-[rgb(var(--color),0.85)] capitalize tracking-tight leading-relaxed text-shadow-[0_0_4px_rgb(var(--color),0.25)]"
+      >
+        {heroContent.textCol1}
+      </p>
+    </div>
+    <!-- Column 2: Subtitle + Person -->
+    <div class="md:w-50 shrink-0 flex flex-col gap-6">
+      <p
+        class="text-sm text-[rgb(var(--color),0.65)] font-light tracking-tight leading-relaxed"
+      >
+        {heroContent.textCol2}
+      </p>
+
+      <div class="flex items-center gap-3">
+        <div
+          class="size-10 rounded-full overflow-hidden shrink-0 bg-[rgb(var(--color))]"
+        >
+          <Image
+            src={heroContent.image}
+            alt={heroContent.title}
+            class="size-full object-cover"
+          />
+        </div>
+        <div>
+          <h4
+            class="text-sm font-semibold text-[rgb(var(--color),0.85)] tracking-tighter leading-tight"
+          >
+            {heroContent.title}.
+          </h4>
+          <p
+            class="text-xs text-[rgb(var(--color),0.55)] font-inconsolata font-light tracking-tight"
+          >
+            {heroContent.subtitle}
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Column 3: Main Quote -->
+    <div class="flex-1">
+      <p
+        class="text-lg font-semibold font-inter-tight text-[rgb(var(--color),0.85)] leading-snug tracking-tighter text-pretty"
+      >
+        {heroContent.textCol3}
+      </p>
+    </div>
+  </div>
+</section>

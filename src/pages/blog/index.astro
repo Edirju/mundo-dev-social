@@ -1,14 +1,103 @@
 ---
-import Layout from "#layouts/Layout.astro"
+import Layout from "#layouts/Layout.astro";
 import Section from "#components/Section.astro";
+import Hero from "#components/Hero.astro";
 import PostCollection from "#pods/post-collection/post-collection.pod.astro";
+import ContactBtn from "#components/ContactBtn.astro";
 
-import {basics} from "#data/info.json"
+import { basics } from "#data/info.json";
 const { name, label } = basics;
-
 ---
 
 <Layout title={`Blog de ${name} • ${label}`}>
-	<PostCollection />	
-</Layout>			
+  <Section>
+    <section class="flex flex-col gap-4">
+      <h1
+        class="text-3xl font-semibold text-[rgb(var(--color),0.85)] leading-tight tracking-tight"
+      >
+        Mi rincón para
+        <span class="inline-flex items-center -space-x-3 translate-y-1 mx-2">
+          <div class="relative group cursor-pointer">
+            <div
+              class="absolute -top-14 left-1/2 -translate-x-1/2 bg-[rgb(var(--color))] text-[rgb(var(--light))] dark:text-[rgb(var(--dark))] font-inconsolata tracking-wide py-1 px-2 rounded-md transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl opacity-0 group-hover:opacity-100 rotate-[-10deg] origin-bottom"
+            >
+              <div class="flex flex-col gap-0.5 items-center justify-center">
+                <span class="font-medium text-xs">Edinson</span>
+                <span class="text-secondary-300 text-[10px] -mt-1"
+                  >Frontend Dev</span
+                >
+              </div>
+              <div
+                class="absolute -bottom-1 left-1/2 -translate-x-1/2 size-2.5 bg-[rgb(var(--color))] rotate-45"
+              >
+              </div>
+            </div>
+            <img
+              src={`/img-01.webp`}
+              alt="avatar"
+              class="size-10 rounded-full border-2 border-[rgb(var(--color))] object-cover transition-all duration-300 relative group-hover:scale-105 group-hover:z-20 grayscale group-hover:grayscale-0"
+            />
+          </div>
 
+          <div class="relative group cursor-pointer">
+            <div
+              class="absolute -top-14 left-1/2 -translate-x-1/2 bg-[rgb(var(--color))] text-[rgb(var(--light))] dark:text-[rgb(var(--dark))] font-inconsolata tracking-wide py-1 px-2 rounded-md transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex flex-col gap-0.5 items-center justify-center">
+                <span class="font-medium text-xs">Edirju</span>
+                <span class="text-gray-400 text-[10px] -mt-1"
+                  >Software Enginer</span
+                >
+              </div>
+              <div
+                class="absolute -bottom-1 left-1/2 -translate-x-1/2 size-2.5 bg-[rgb(var(--color))] rotate-45"
+              >
+              </div>
+            </div>
+            <img
+              src={`/img-02.webp`}
+              alt="avatar"
+              class="size-10 rounded-full border-2 border-[rgb(var(--color))] object-cover transition-all duration-300 relative group-hover:scale-105 group-hover:z-20 grayscale group-hover:grayscale-0"
+            />
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <div
+              class="absolute -top-14 left-1/2 -translate-x-1/2 bg-[rgb(var(--color))] text-[rgb(var(--light))] dark:text-[rgb(var(--dark))] font-inconsolata tracking-wide py-1 px-2 rounded-md transition-all duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl opacity-0 group-hover:opacity-100 rotate-10 origin-bottom"
+            >
+              <div class="flex flex-col gap-0.5 items-center justify-center">
+                <span class="font-medium text-xs">Ediriv</span>
+                <span class="text-amber-400 text-[10px] -mt-1"
+                  >Social Media</span
+                >
+              </div>
+              <div
+                class="absolute -bottom-1 left-1/2 -translate-x-1/2 size-2.5 bg-[rgb(var(--color))] rotate-45"
+              >
+              </div>
+            </div>
+            <img
+              src={`/img-03.webp`}
+              alt="avatar"
+              class="size-10 rounded-full border-2 border-[rgb(var(--color))] object-cover transition-all duration-300 relative group-hover:scale-105 group-hover:z-20 grayscale group-hover:grayscale-0"
+            />
+          </div>
+        </span>
+        reflexionar a fondo, sin la prisa de un timeline.
+      </h1>
+
+      <p
+        class="text-lg text-secondary-600 font-light leading-tight tracking-tighter text-pretty [&>strong]:font-medium [&>strong]:text-[rgb(var(--color),0.75)] [&>strong]:text-shadow-[0_0_8px_rgb(var(--color),0.25)] "
+      >
+        Este es el feed del <strong>pensamiento</strong> en voz alta — Notas rápidas,
+        enlaces que me volaron la cabeza y esas <strong>ideas</strong> que no pueden esperar. <strong>Directo</strong>, breve y al grano.
+      </p>
+
+      <div class="w-full sm:w-1/2 mr-auto pt-3">
+        <ContactBtn />
+      </div>
+    </section>
+  </Section>
+
+  <PostCollection />
+</Layout>

@@ -1,11 +1,20 @@
 ---
 import Layout from "#layouts/Layout.astro";
 import ProjectGlobal from "#pods/projects/project-global.astro";
+import Section from "#components/Section.astro";
+import OrbitSection from "#pods/sliders/OrbitSection.astro";
+
 
 import { basics } from "#data/info.json";
 const { name, label } = basics;
 ---
+
 <Layout title={`Proyectos de ${name} • ${label}`}>
-  <ProjectGlobal />  
+  
+  <Section>
+    <OrbitSection />    
+  </Section>
+
+  <ProjectGlobal />
 </Layout>
 
