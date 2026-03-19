@@ -12,7 +12,9 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:4321",
   integrations: [mdx(), sitemap(), react()],
 
   vite: {
@@ -24,9 +26,8 @@ export default defineConfig({
         context: "server",
         access: "secret",
         optional: false,
-        default: "INFORM_VALID_TOKEN",
-      })
-    }
+      }),
+    },
   },
 
   adapter: vercel(),

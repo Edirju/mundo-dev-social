@@ -1,0 +1,11 @@
+{
+  "framework": "astro",
+  "functions": {
+    "src/pages/posts/[slug].astro": {
+      "maxDuration": 15
+    },
+    "src/pages/posts/index.astro": {
+      "maxDuration": 15
+    }
+  }
+}
