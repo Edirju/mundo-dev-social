@@ -21,7 +21,7 @@ const SOCIAL_ICONS: Record<string, any> = {
 
 <nav
   aria-label="Contact Links"
-  class="flex items-center justify-between text-[rgb(var(--color),0.85)] [&>a]:size-6 md:[&>a]:size-8 [&>a]:bg-[rgb(var(--dark))] [&>a]:text-[rgb(var(--light))] [&>a]:rounded-full [&>a]:flex [&>a]:items-center [&>a]:justify-center [&>a]:hover:bg-blue-950 [&>a]:hover:text-amber-400 [&>a>svg]:size-4 md:[&>a>svg]:size-5 [&>a]:transition-all [&>a]:duration-300 [&>a]:hover:scale-110 [&>a]:hover:transform-[rotate(360deg)]"
+  class="flex items-center justify-between text-[rgb(var(--color),0.85)] [&>a]:size-6 md:[&>a]:size-8 [&>a]:bg-[rgb(var(--dark))] dark:[&>a]:bg-secondary-400 [&>a]:text-[rgb(var(--light))] [&>a]:rounded-full [&>a]:flex [&>a]:items-center [&>a]:justify-center [&>a]:hover:bg-tertiary-400 [&>a]:hover:text-[rgb(var(--dark))] [&>a>svg]:size-4 md:[&>a>svg]:size-5 [&>a]:transition-all [&>a]:duration-300 [&>a]:hover:scale-110 [&>a]:hover:transform-[rotate(360deg)]"
 >
   {
     profiles.map(({ network, url }) => {

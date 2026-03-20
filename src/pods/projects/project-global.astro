@@ -11,7 +11,7 @@ const projects = PROJECTS.filter((project) => !project.hidden)
 ---
 
 <Section>
-  <section class="flex flex-col flex-1 gap-6 md:gap-8">
+  <section class="flex flex-col flex-1 gap-6 md:gap-8 ">
     <h3
       class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
     >
@@ -23,23 +23,23 @@ const projects = PROJECTS.filter((project) => !project.hidden)
       class="grid max-w-175 gap-6 grid-cols-1 justify-center sm:grid-cols-2 md:grid-cols-3"
     >
       <article
-        class="border border-[rgb(var(--color),0.10)] bg-[rgb(var(--light),0.15)] dark:bg-[rgb(var(--dark))] backdrop-blur-2xl rounded-xl p-4 min-h-40"
+        class="border border-[rgb(var(--color),0.05)] bg-[rgb(var(--light),0.25)] dark:bg-[rgb(var(--dark))] backdrop-blur-2xl rounded-xl p-4 min-h-40 "
       >
         <a
           href="#"
           rel="noopener noreferrer"
-          class="flex flex-col items-center justify-center h-full text-sm font-light tracking-tighter transition-all duration-200 opacity-65 [&>svg]:size-12 hover:opacity-100 hover:scale-110"
+          class="flex flex-col items-center justify-center h-full text-sm font-light tracking-tighter transition-all duration-200 opacity-65 [&>svg]:size-12 hover:opacity-100 hover:text-secondary-500 hover:scale-110"
         >
           <Github />
           Próximamente en <strong>GitHub</strong> siguiente proyecto...
-        </a>
+        </a> 
       </article>
       {
         projects.map((project, reversedIndex) => {
           const index = projects.length - reversedIndex - 1;
           const num = `${index + 1}`.padStart(2, "0");
           return (
-            <article class="group border border-[rgb(var(--color),0.10)] rounded-xl bg-[rgb(var(--light))] dark:bg-[rgb(var(--dark))] min-h-40 p-2 ">
+            <article class="group border border-[rgb(var(--color),0.03)] rounded-xl bg-[rgb(var(--light),0.25)] dark:bg-[rgb(var(--dark),0.45)] min-h-40 p-2 backdrop-blur-2xl backdrop-saturate-100 ">
               <div class="flex flex-col h-full ">
                 <div class="relative aspect-video overflow-hidden rounded-xl mb-4 ">
                   <span class="absolute z-2 text-xl text-[rgb(var(--light))] font-extrabold font-inter tracking-tighter top-6 left-6 -rotate-12 transition duration-200 opacity-80 group-hover:scale-[1.5] group-hover:opacity-100 text-shadow-[0_0_4px_rgb(var(--dark),0.85)]">

@@ -13,10 +13,12 @@ const readTimeLabel = "min read";
 <a
   href={`/posts/${post.slug}`}
   title={`Ver ${post.title}`}
-  class="border border-[rgb(var(--color),0.05)] dark:border-[rgb(var(--dark),0.15)] group bg-[rgb(var(--light),0.08)] dark:bg-[rgb(var(--dark),0.10)] backdrop-blur-2xl backdrop-saturate-100 rounded-xl p-4 overflow-hidden shadow-[0_0_12px_rgb(var(--color),0.1)] dark:shadow-[0_0_12px_rgb(0_0_0/0.25)] group"
+  class="border border-[rgb(var(--color),0.03)] dark:border-[rgb(var(--dark),0.15)] group bg-[rgb(var(--light),0.08)] dark:bg-[rgb(var(--dark),0.10)] backdrop-blur-2xl backdrop-saturate-100 rounded-xl p-4 overflow-hidden shadow-[0_0_12px_rgb(var(--color),0.05)] dark:shadow-[0_0_12px_rgb(0_0_0/0.15)] group"
 >
   <div class="flex flex-col gap-1 h-full">
-    <figure class="[&>svg]:size-5 transition-all duration-300 group-hover:text-primary-600">
+    <figure
+      class="[&>svg]:size-5 transition-all duration-300 group-hover:text-tertiary-600"
+    >
       <Info aria-hidden="true" />
     </figure>
 
@@ -34,16 +36,18 @@ const readTimeLabel = "min read";
             })
           }
         </time>
-        <h4 class="text-base font-medium tracking-tight leading-[1.15] group-hover:text-secondary-500 transition-all duration-300">
+        <h4
+          class="text-base font-medium tracking-tight leading-[1.15] group-hover:text-tertiary-500 transition-all duration-300"
+        >
           {post.title}.
         </h4>
-        <p class="text-sm font-light leading-tight opacity-65">
+        <p class="text-sm font-light leading-tight opacity-65 ">
           {post.summary}
         </p>
       </div>
 
       <div
-        class="font-inconsolata flex items-center justify-between gap-4 text-xs font-light tracking-wide transition-opacity hover:opacity-65"
+        class="font-inconsolata flex items-center justify-between gap-4 text-xs font-light tracking-wide transition-opacity group-hover:opacity-65"
       >
         <span>{post.readTime} {readTimeLabel}</span>
         <div class="flex items-center gap-1 [&>svg]:size-4">
