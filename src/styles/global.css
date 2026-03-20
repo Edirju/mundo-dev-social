@@ -22,20 +22,13 @@
 	--step-6: clamp(2.154rem, 1.69rem + 2.062vw, 3.5459rem);
 
 	/* Colors Base */
-	--dark: 30, 37, 44;
-	/* #1e252c */
-	--light: 255, 254, 254;
-	/* #fffefe */
-	--accent: 205, 82, 65;
-	/* #cd5241 */
-	--accent-dark: 98, 35, 26;
-	/* #62231a */
-	--accent-50: 0, 102, 94;
-	/* #00665e */
-	--accent-dark-50: 0, 60, 55;
-	/* #003c37 */
-	--color-text: hsl(210, 19%, 15%);
-	--color: 30, 37, 44;
+	--dark: 30, 37, 44; 	/* #1e252c */
+	--light: 255, 254, 254; 	/* #fffefe */
+	--accent: 205, 82, 65; 	/* #cd5241 */
+	--accent-dark: 98, 35, 26; 	/* #62231a */
+	--accent-50: 0, 102, 94; 	/* #00665e */
+	--accent-dark-50: 0, 60, 55; 	/* #003c37 */
+	--color-text: hsl(210, 19%, 15%); 	--color: 30, 37, 44;
 
 	--color-primary-50: rgb(238, 241, 245);
 	--color-primary-100: rgb(212, 221, 231);
@@ -304,7 +297,7 @@ h6 {
 .color-pattern {
 	@apply fixed inset-0 -z-100;
 	background: radial-gradient(ellipse 120% 80% at 70% 20%,
-			hsl(7, 58%, 53%, 0.15),
+			hsl(330.37, 81%, 60%, 0.15),
 			transparent 50%),
 		radial-gradient(ellipse 100% 60% at 30% 10%,
 			hsl(175, 100%, 20%, 0.12),
