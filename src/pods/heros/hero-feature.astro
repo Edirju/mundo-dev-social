@@ -1,0 +1,25 @@
+---
+import ContactBtn from "#components/ContactBtn.astro";
+import AvatarGroup from "./components/avatar-group.astro";
+---
+
+<section class="flex flex-col gap-4">
+  <h1
+    class="text-2xl font-semibold text-[rgb(var(--color),0.85)] leading-tight tracking-tight"
+  >
+    Mi rincón para
+    <AvatarGroup />    
+    desarrollo web, social media y opinión.
+  </h1>
+
+  <p
+    class="text-lg text-[rgb(var(--color),0.65)] font-light leading-tight tracking-tight [&>strong]:font-medium [&>strong]:text-[rgb(var(--color),0.75)] [&>strong]:text-shadow-[0_0_8px_rgb(var(--color),0.15)]"
+  >
+    Exploro <strong>desarrollo web</strong>, <strong>tecnología</strong> y gestión de <strong>social media</strong>. Comparto mí <strong>opinion</strong> y trabajos.
+  </p>
+
+  <div class="w-full sm:w-1/2 mr-auto pt-3">
+    <ContactBtn />
+  </div>
+
+</section>

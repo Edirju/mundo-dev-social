@@ -1,6 +1,7 @@
 ---
 import Heart from "#assets/icons/Heart.astro";
 import Info from "#assets/icons/Info.astro";
+import Gear from "#assets/icons/Gear.astro";
 
 import type { Post } from "../post.collection.model";
 interface Props {
@@ -17,7 +18,7 @@ const readTimeLabel = "min read";
 >
   <div class="flex flex-col gap-1 h-full">
     <figure
-      class="[&>svg]:size-5 transition-all duration-300 group-hover:text-tertiary-600"
+      class="[&>svg]:size-5 text-[rgb(var(--color),0.85)] transition-all duration-300 group-hover:text-secondary-500"
     >
       <Info aria-hidden="true" />
     </figure>
@@ -26,7 +27,7 @@ const readTimeLabel = "min read";
       <div class="flex flex-col gap-1">
         <time
           datetime={post.date}
-          class="block font-inconsolata font-light text-xs tracking-tighter"
+          class="block font-inconsolata font-light text-xs tracking-tighter group-hover:text-secondary-500/85"
         >
           {
             new Date(post.date).toLocaleDateString("en-US", {
@@ -37,20 +38,20 @@ const readTimeLabel = "min read";
           }
         </time>
         <h4
-          class="text-base font-medium tracking-tight leading-[1.15] group-hover:text-tertiary-500 transition-all duration-300"
+          class="text-base font-medium tracking-tighter leading-[1.15] group-hover:text-secondary-500 transition-all duration-300 group-hover:text-shadow-[0_0_8px_rgb(var(--color),0.15)]"
         >
           {post.title}.
         </h4>
-        <p class="text-sm font-light leading-tight opacity-65 ">
+        <!-- <p class="text-sm font-light leading-tight opacity-65 ">
           {post.summary}
-        </p>
+        </p> -->
       </div>
 
       <div
         class="font-inconsolata flex items-center justify-between gap-4 text-xs font-light tracking-wide transition-opacity group-hover:opacity-65"
       >
         <span>{post.readTime} {readTimeLabel}</span>
-        <div class="flex items-center gap-1 [&>svg]:size-4">
+        <div class="flex items-center gap-1 [&>svg]:size-4 group-hover:text-red-400">
           <Heart aria-hidden="true" />
           <span>{6}</span>
         </div>

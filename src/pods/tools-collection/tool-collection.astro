@@ -1,6 +1,7 @@
 ---
 import type { ToolSectionContent } from "#pods/tools-collection/components/tool-collection.model.ts";
 import ToolsIcon from "#assets/icons/Tools.astro";
+import Cog from "#assets/icons/Cog.astro";
 
 const toolCollectionContent: ToolSectionContent = {
   heading: "Habilidades",
@@ -94,9 +95,9 @@ const toolCollectionContent: ToolSectionContent = {
 };
 ---
 
-<section aria-labelledby="tech-tools-heading" class="flex flex-col gap-4">
+<section aria-labelledby="tech-tools-heading" class="flex flex-col gap-4"> 
   <h2 class="flex items-center gap-1 text-[rgb(var(--color),0.85)] text-base font-semibold tracking-tight [&>svg]:size-5 [&>span]:font-light [&>span]:opacity-45 ">
-    <ToolsIcon /> <span>|</span> {toolCollectionContent.heading}
+    <Cog /> <span>|</span> {toolCollectionContent.heading}
   </h2>
   
   <p class="text-sm font-light text-[rgb(var(--color),0.65)] text-pretty tracking-tighter">

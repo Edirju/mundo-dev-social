@@ -1,0 +1,53 @@
+---
+import AvatarCard from "./avatar-card.astro";
+
+import Avatar1 from "#assets/img-01.webp";
+import Avatar2 from "#assets/img-02.webp";
+import Avatar3 from "#assets/img-03.webp";
+
+interface Avatar {
+  name: string;
+  role: string;
+  image: ImageMetadata;
+  rotateTooltip?: "left" | "right" | "none";
+  roleColor?: string;
+}
+
+const avatars: Avatar[] = [
+  {
+    name: "Edinson",
+    role: "Frontend Dev",
+    image: Avatar1,
+    rotateTooltip: "left",
+    roleColor: "text-secondary-300",
+  },
+  {
+    name: "Edirju",
+    role: "Software Engineer",
+    image: Avatar2,
+    rotateTooltip: "none",
+    roleColor: "text-gray-400",
+  },
+  {
+    name: "Ediriv",
+    role: "Social Media",
+    image: Avatar3,
+    rotateTooltip: "right",
+    roleColor: "text-amber-400",
+  },
+];
+---
+
+<span class="inline-flex items-center -space-x-3 translate-y-1 mx-2"> 
+  {
+    avatars.map((avatar) => (
+      <AvatarCard 
+        name={avatar.name}
+        role={avatar.role}
+        image={avatar.image}
+        rotateTooltip={avatar.rotateTooltip}
+        roleColor={avatar.roleColor}
+      />
+    ))
+  }
+</span>

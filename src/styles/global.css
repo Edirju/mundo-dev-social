@@ -1,12 +1,14 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @import 'tailwind-animations';
+@import '@fontsource-variable/geist/wght.css';
 @import '@fontsource-variable/inter';
 @import '@fontsource-variable/inter-tight';
 @import '@fontsource-variable/inconsolata';
 
 :root {
 	/* Fonts */
+	--font-geist: "Geist Variable", sans-serif;
 	--font-inter-tight: "Inter Tight Variable", sans-serif;
 	--font-inter: "Inter Variable", sans-serif;
 	--font-inconsolata: "Inconsolata Variable", monospace;
@@ -168,6 +170,7 @@
 	--font-inter-tight: "Inter Tight Variable", sans-serif;
 	--font-inter: "Inter Variable", sans-serif;
 	--font-inconsolata: "Inconsolata Variable", monospace;
+	--font-geist: "Geist Variable", sans-serif;
 
 	--text-xs: var(--step--2);
 	--text-sm: var(--step--1);
@@ -279,6 +282,11 @@
       @apply rounded bg-[rgb(var(--light),0.85)] px-1.5 py-1 dark:bg-gray-900;
     }
   }
+	
+	.title-gradient {
+		@apply bg-linear-to-br from-[rgb(var(--light),0.85)] via-[rgb(var(--light),0.65)] to-slate-500 bg-clip-text text-transparent;
+		padding-bottom: 0.1em;
+	}
 }
 
 body {
@@ -291,7 +299,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-inter-tight);
+	font-family: var(--font-geist);
 }
 
 .color-pattern {

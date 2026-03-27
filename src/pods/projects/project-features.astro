@@ -1,6 +1,7 @@
 ---
 import Data from "#assets/icons/Data.astro";
 import Info from "#assets/icons/Info.astro";
+import Gear from "#assets/icons/Gear.astro"; 
 
 import { PROJECTS } from "#data/projects.js";
 const projects = PROJECTS.filter((project) => !project.hidden);
@@ -29,9 +30,9 @@ const feactures = projects
             class="group border border-[rgb(var(--color),0.03)] bg-[rgb(var(--light),0.15)] dark:border-[rgb(var(--dark),0.10)] dark:bg-[rgb(var(--dark),0.25)] backdrop-blur-2xl backdrop-saturate-100 rounded-xl p-4 overflow-hidden shadow-[0_0_12px_rgb(var(--color),0.05)] dark:shadow-[0_0_12px_rgb(0_0_0/0.15)]"
           >
             <div class="flex flex-col gap-4 h-full">
-              <div class="flex items-center gap-1 relative transition-all duration-300 group-hover:[&>svg]:rotate-12 group-hover:[&>svg]:text-secondary-500">
-                <Info />
-                <span class="absolute left-8 top-0 z-2 font-bold font-inter text-base tracking-tight transition-all duration-300 group-hover:-rotate-12 group-hover:scale-125 group-hover:text-secondary-500/85">
+              <div class="flex items-center gap-1 relative transition-all duration-300 [&>svg]:size-5 group-hover:[&>svg]:rotate-12 group-hover:[&>svg]:text-secondary-500">
+                <Gear />
+                <span class="absolute left-6 top-0 z-2 font-bold font-geist text-base tracking-tight transition-all duration-300 group-hover:-rotate-12 group-hover:scale-125 group-hover:text-secondary-500/85">
                   #{num}
                 </span>
               </div>
@@ -40,10 +41,10 @@ const feactures = projects
                 <h4 class="font-semibold text-sm leading-tight tracking-tighter opacity-85 group-hover:text-secondary-500">
                   {project.title}
                 </h4>
-                <p class="font-inconsolata font-light tracking-tighter leading-tight text-sm opacity-65">
+                <p class="font-inconsolata font-light tracking-tighter leading-tight text-xs opacity-65">
                   {project.description}
                 </p>
-                <ul class="font-inter font-light text-[10px] flex flex-wrap gap-1">
+                {/* <ul class="font-inter font-light text-[10px] flex flex-wrap gap-1">
                   {
                     project.learnings.map((learning) => (
                       <li class="border border-secondary-500/25 text-[rgb(var(--color),0.45)] px-1 rounded-full group-hover:border-secondary-500/45 group-hover:text-[rgb(var(--color),0.55)]">
@@ -51,7 +52,7 @@ const feactures = projects
                       </li>
                     ))
                   }
-                </ul>
+                </ul> */}
               </div>
             </div>
           </a>

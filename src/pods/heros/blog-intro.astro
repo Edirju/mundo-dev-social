@@ -1,0 +1,77 @@
+---
+import AvatarGroup from "./components/avatar-group.astro";
+
+//import AvatarCard from "./components/avatar-card.astro";
+// const avatarsContent = {
+//   heading: "Posts",
+//   description: "publicaciiones de mi blog",
+//   avatars: [
+//     {
+//       name: "HTML",
+//       role: "Frontend",
+//       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+//     },
+//     {
+//       name: "CSS",
+//       role: "Frontend",
+//       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+//     },
+//     {
+//       name: "JavaScript",
+//       role: "Programming",
+//       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+//     },
+//     {
+//       name: "React",
+//       role: "Framework",
+//       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
+//     },
+//     {
+//       name: "Figma",
+//       role: "Design",
+//       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+//     },
+//   ],
+// };
+---
+
+<section class="flex flex-col gap-4">
+  <h1
+    class="text-2xl font-semibold text-[rgb(var(--color),0.85)] leading-tight tracking-tight"
+  >
+    Un lugar para
+    <AvatarGroup />
+    <!-- <span class="inline-flex items-center -space-x-3 translate-y-1 mx-2">
+      {
+        avatarsContent.avatars.map((avatar) => (
+          <div class="relative group cursor-pointer">
+            <div class="absolute -top-14 left-1/2 -translate-x-1/2 bg-[rgb(var(--color))] text-[rgb(var(--light))] dark:text-[rgb(var(--dark))] font-inconsolata tracking-wide py-1 px-2 rounded-md transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl opacity-0 group-hover:opacity-100 ">
+              <div class="flex flex-col gap-0.5 items-center justify-center">
+                <span class="font-medium text-xs">{avatar.name}</span>
+                <span class="text-[10px] -mt-1">{avatar.role}</span>
+              </div>
+              <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 size-2.5 bg-[rgb(var(--color))] rotate-45" />
+            </div>
+            <figure class="size-10 flex items-center justify-center border-2 border-[rgb(var(--color))] rounded-full transition-all duration-300 relative group-hover:scale-105 group-hover:z-20  backdrop-blur-2xl">
+              <img
+                src={avatar.logo}
+                alt={avatar.name}                
+                class="size-6 object-cover"
+              />
+            </figure>
+          </div>
+        ))
+      }      
+    </span> -->
+    reflexionar a fondo, sin la prisa de un timeline.
+  </h1>
+
+  <p
+    class="text-lg text-[rgb(var(--color),0.65)] font-light leading-tighter tracking-tighter text-pretty [&>strong]:font-medium [&>strong]:text-[rgb(var(--color),0.75)] [&>strong]:text-shadow-[0_0_8px_rgb(var(--color),0.15)]"
+  >
+    Este es el feed del <strong>pensamiento</strong> en voz alta — Notas rápidas,
+    enlaces que me volaron la cabeza y esas <strong>ideas</strong> que no pueden esperar.
+    <strong>Directo</strong>, breve y al grano.
+  </p>
+  
+</section>

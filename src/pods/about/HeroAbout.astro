@@ -1,10 +1,9 @@
 ---
-import Section from "#components/Section.astro";
 import Avatar from "#assets/img-01.webp";
 import { Image } from "astro:assets";
 
 const heroContent = {
-  heading: "Acerca",
+  heading: "MiniBio",
   textCol1: "desarrollo web & social media.",
   textCol2:
     "El objetivo es reunir a mentes diversas y convertir las ideas en experiencias que marquen la diferencia.",
@@ -12,13 +11,13 @@ const heroContent = {
     "Me apasiona crear experiencias web increíbles con tecnologías modernas. Me encanta compartir conocimientos a través de artículos y talleres.",
   image: Avatar,
   title: "Edinson Rivera",
-  subtitle: "Creative Director",
+  subtitle: "El propio man",
 };
 ---
 
 <section class="w-full mx-auto">
   <h3
-    class="text-2xl font-semibold tracking-tight mb-6 md:mb-8 text-shadow-[0_0_8px_rgb(var(--color),0.25)]"
+    class="text-xl font-semibold tracking-tight mb-6 md:mb-8 text-shadow-[0_0_8px_rgb(var(--color),0.25)]"
   >
     {heroContent.heading}
   </h3>
@@ -27,7 +26,7 @@ const heroContent = {
     <!-- Column 1: Label -->
     <div class="hidden md:block md:w-25 shrink-0">
       <p
-        class="text-sm font-inter font-medium text-[rgb(var(--color),0.85)] capitalize tracking-tight leading-relaxed text-shadow-[0_0_4px_rgb(var(--color),0.25)]"
+        class="text-sm font-geist font-medium text-[rgb(var(--color),0.85)] capitalize tracking-tight leading-relaxed text-shadow-[0_0_4px_rgb(var(--color),0.25)]"
       >
         {heroContent.textCol1}
       </p>
@@ -67,7 +66,7 @@ const heroContent = {
     <!-- Column 3: Main Quote -->
     <div class="flex-1">
       <p
-        class="text-lg font-semibold font-inter-tight text-[rgb(var(--color),0.85)] leading-snug tracking-tighter text-pretty"
+        class="text-lg font-semibold font-geist text-[rgb(var(--color),0.85)] leading-snug tracking-tight text-pretty"
       >
         {heroContent.textCol3}
       </p>
