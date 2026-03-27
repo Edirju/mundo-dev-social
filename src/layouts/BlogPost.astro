@@ -1,86 +1,233 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
+import ArrowLeft from "#assets/icons/ArrowLeft.astro";
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+  <body>
+    <Header />
+    <main class="w-[calc(100%-1em)] max-w-175 mx-auto">
+      <article>
+        <figure class="hero-image w-full overflow-hidden aspect-video">
+          {
+            heroImage && (
+              <Image
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt="imagen de portada"
+                class={`block mx-auto rounded-xl object-cover shadow-[0_0_16px_rgb(var(--color),0.10)]`}
+              />
+            )
+          }
+        </figure>
+
+        <div
+          class="prose m-auto max-w-[calc(100%-1em)] w-175 px-4 text-[rgb(var(--color),0.85)]"
+        >
+          <div class="flex items-center justify-between mb-8 ">
+            <a
+              href="/blog"
+              title="Regresar a página principal"
+              class="flex items-center gap-1 text-sm font-inconsolata font-light tracking-tighter text-[rgb(var(--color),0.65)] transition-all duration-300 hover:text-secondary-500 hover:underline hover:underline-offset-2"
+            >
+              <ArrowLeft />
+              <span>Regresar</span>
+            </a>
+
+            <div
+              class="flex items-center font-inconsolata font-light select-none text-[rgb(var(--color),0.65)]"
+            >
+              <span>Publicado: </span>
+              <div class="text-sm">
+                <FormattedDate date={pubDate} />
+                {
+                  updatedDate && (
+                    <div class="last-updated-on">
+                      Last updated on <FormattedDate date={updatedDate} />
+                    </div>
+                  )
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="title mb-4 py-4">
+            <h1 class="text-4xl font-semibold tracking-tight leading-tight text-[rgb(var(--color),0.85)] text-shadow-[0_0_12px_rgb(var(--color),0.25)]">{title}</h1>
+            <hr class="my-4 border-t border-dotted border-[rgb(var(--color),0.12)] " />
+          </div>
+
+          <section class="main-content">
+            <slot />
+          </section>
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
 </html>
+
+<style>    
+  .main-content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 1.25;
+      margin: 0.5rem 0 1rem;
+      color: rgb(var(--color), 0.85);
+      text-wrap: pretty;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    h5,
+    h6 {
+      font-size: 18px;
+    }
+
+    strong,
+    b {
+      font-weight: 500;
+    }
+
+    a {
+      color: var(--color-cyan-700);
+      transition: all 0.3s ease;
+      &:where(.dark, .dark *) {
+        color: var(--color-yellow-600);
+      }
+      &:hover {
+        color: var(--color-red-500);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-shadow: 0 0 8px rgb(var(--color), 0.25);
+      }
+      &:where(.dark, .dark *):hover {
+        color: var(--color-green-500);
+      }
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    input {
+      font-size: 1rem;
+    }
+
+    table {
+      width: 100%;
+      letter-spacing: 0.025em;
+      line-height: 1.5;
+      border-collapse: separate;
+      table-layout: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    code {
+      font-family: var(--font-inconsolata);
+      font-weight: 300;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      background-color: var(--color-gray-900);
+      color: var(--color-white);
+    }
+
+    pre {
+      background-color: var(--color-gray-900);
+      padding: 1rem;
+      border-radius: 8px;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    pre > code {
+      all: unset;
+    }
+
+    blockquote {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      font-size: var(--text-sm);
+      letter-spacing: -0.05em;
+      line-height: 1.25;
+      border-left: 3px solid rgb(var(--color), 0.85);
+      @media (width >= 40rem) {
+        font-size: var(--text-lg);
+      }
+    }
+
+    hr {
+      border-top: 1px solid rgb(var(--color), 0.35);
+      margin-block: 1rem;
+    }
+
+    mark {
+      background-color: var(--color-amber-300);
+      padding-inline: 4px;
+      color: var(--color-zinc-800);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 16px;
+      list-style-type: disc;
+      list-style-position: inside;
+      line-height: 1.5;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0 0 0 1rem;
+      list-style-type: decimal;
+      list-style-position: inside;
+      line-height: 1.5;
+    }
+  }
+</style>

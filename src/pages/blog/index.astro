@@ -3,6 +3,8 @@ import Layout from "#layouts/Layout.astro";
 import Section from "#components/Section.astro";
 import BlogIntro from "#pods/heros/blog-intro.astro";
 import PostCollection from "#pods/post-collection/post-collection.pod.astro";
+import PostLocal from "#pods/post-collection/post-local.pod.astro";
+
 import { basics } from "#data/info.json";
 const { name, label } = basics;
 ---
@@ -11,6 +13,6 @@ const { name, label } = basics;
   <Section >
     <BlogIntro /> 
   </Section>
-
   <PostCollection />
+  <PostLocal />
 </Layout>
