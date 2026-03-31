@@ -15,6 +15,8 @@ const { entry, likeCount, minReadText } = Astro.props;
 <section class="flex flex-col gap-6">
   <h1
     class="text-4xl font-semibold tracking-tight leading-tight text-[rgb(var(--color),0.85)] text-shadow-[0_0_12px_rgb(var(--color),0.25)]"
+    id="article-section-heading"
+    transition:name={`${entry.title}-title`}
   >
     {entry.title}
   </h1>

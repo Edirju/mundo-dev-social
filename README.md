@@ -1,6 +1,6 @@
 # 🌐 Mundo Dev Social
 
-> Blog personal y portafolio de desarrollo web — construido con Astro, Content Island y desplegado en Vercel.
+> Blog personal y portafolio de desarrollo web — construido con Astro, Content Island, Tailwind - y desplegado en Vercel.
 
 **Live:** [edinson-mundo-blog.vercel.app](https://edinson-mundo-blog.vercel.app)
 
