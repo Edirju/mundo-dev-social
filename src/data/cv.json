@@ -2,15 +2,16 @@
   "basics": {
     "name": "Edinson Rivera Jurado",
     "label": "Ingeniero de Sistemas con intereses en desarrollo web y marketing digital con +5 años de experiencia & Creador de Contenido de Programación.",
+    "heading": "Ingeniero de Sistemas | Frontend Developer | Social Media Tech | Soporte TI & Omnicanal • Soporte avanzado con enfoque en resolución eficiente y experiencia del usuario.",
     "image": "/me.webp",
     "email": "edirju@gmail.com",
-    "phone": "+57 3128288647",
+    "phone": "+57 3244463428",
     "url": "https://edinson-mundo-blog.vercel.app/",
-    "summary": "+5 años de experiencia como Desarrollador Web y Community manager. Ingeniero de Sistemas de la Universidad INCCA de Colombia con intereses en el sector de IT, desarrollo web/software y marketing  digital, con experiencia en aplicaciones informáticas, asesorías  tecnológicas para analizar, diseñar, comprobar y evaluar sistemas de información, troubleshooting presencial y remoto. Actualmente soy freelance - creador de contenido. Vivo en Cali, Colombia. He trabajado en diferentes entornos: desde diseñador web hasta gestor de redes sociales en equipos de empresas multinacionales.",
+    "summary": "Ingeniero de Sistemas con +10 años de experiencia en soporte técnico de TI, atención al cliente, operaciones de Contact Center y desarrollo web frontend. Experiencia comprobada en la gestión de plataformas de redes sociales a escala LATAM, soporte remoto y presencial, y desarrollo de soluciones web con frameworks modernos de JavaScript. Habilidades en supervisión de equipos, gestión administrativa y aprendizaje continuo. Comunicador efectivo con alta disposición al trabajo bajo presión.",
     "location": {
       "address": "",
       "postalCode": "760023",
-      "city": "Santiago de Cali",
+      "city": "Cali",
       "countryCode": "CO",
       "region": "Colombia"
     },
@@ -26,9 +27,9 @@
         "url": "https://github.com/Edirju"
       },
       {
-        "network": "X",
-        "username": "edinson_rivera",
-        "url": "https://twitter.com/edinson_rivera"
+        "network": "Bluesky",
+        "username": "Edirju | Edinson Rivera",
+        "url": "https://bsky.app/profile/edinsonrivera.bsky.social"
       }
     ]
   },

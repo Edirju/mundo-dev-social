@@ -2,12 +2,12 @@
 import Section from "#components/Section.astro";
 import {skills} from "#data/cv.json"
 ---
-<Section>
-  <ul class="flex flex-wrap items-center gap-2">
+<Section title="Habilidades">
+  <ul class="flex flex-wrap items-center gap-2 mt-2">
     {
       skills.map(({name}) => {
         return (
-          <li class="flex items-center justify-center text-[10px] font-inconsolata bg-[rgb(var(--dark))] text-white rounded-sm px-2.5 py-1 tracking-widest">
+          <li class="flex items-center justify-center text-xs font-inconsolata font-normal bg-[rgb(var(--dark),0.85)] text-white rounded-lg px-2.5 py-1 tracking-tight">
             {name}
           </li>
         )

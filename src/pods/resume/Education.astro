@@ -27,9 +27,9 @@ import { education } from "#data/cv.json";
           return (
             <li>
               <article>
-                <header class="flex items-start justify-between mb-2 font-inter-tight">
+                <header class="flex items-start justify-between mb-2">
                   <div>
-                    <h3 class="text-base font-semibold text-pretty tracking-wider opacity-75 transition-all duration-300 hover:opacity-100 hover:underline hover:underline-offset-2">
+                    <h3 class="text-base font-semibold text-pretty tracking-tighter transition-all duration-300 hover:underline hover:underline-offset-2">
                       <a
                         href={url}
                         title={`Ver más de ${institution}`}
@@ -38,16 +38,16 @@ import { education } from "#data/cv.json";
                         {institution}
                       </a>
                     </h3>
-                    <h4 class="text-sm font-medium tracking-wide opacity-65">
+                    <h4 class="text-sm font-medium tracking-tight">
                       {area}
                     </h4>
                   </div>
-                  <time class="text-xs font-light opacity-55 min-w-25.5 md:text-right">
+                  <time class="text-sm font-inconsolata opacity-65 min-w-25.5 tracking-tighter md:text-right">
                     {years}
                   </time>
                 </header>
 
-                <footer class="text-xs font-light font-inconsolata text-[rgb(var(--dark),0.85)]">
+                <footer class="text-xs font-inconsolata text-[rgb(var(--dark),0.85)]">
                   <p class="flex gap-4 tracking-tighter m-0 p-0 leading-tight ">
                     {studyType}
                   </p>

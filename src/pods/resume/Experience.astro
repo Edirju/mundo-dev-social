@@ -2,7 +2,7 @@
 import Section from "#components/Section.astro";
 import {work} from "#data/cv.json"
 ---
-<Section title="Experiencia">
+<Section title="Experiencia Laboral">
   <ul class="flex flex-col gap-4 list-none text-sm text-[rgb(var(--dark),0.85)]">
     {
       work.map(({ name, startDate, endDate, position, summary, url, highlights }) => {
@@ -13,17 +13,19 @@ import {work} from "#data/cv.json"
         return (
           <li>
             <article>
-              <header class="flex items-start justify-between mb-2 font-inter-tight">
+              <header class="flex items-start justify-between mb-2">
                 <div>
-                  <h3 class="text-base font-semibold text-pretty tracking-wider opacity-75 transition-all duration-300 hover:opacity-100 hover:underline hover:underline-offset-2">
+                  <h3 class="text-base font-semibold text-pretty tracking-tighter transition-all duration-300 hover:underline hover:underline-offset-2">
                     <a href={url}>{name}</a>
                   </h3>
-                  <h4 class="text-sm font-medium tracking-wide opacity-65">{position}</h4>
+                  <h4 class="text-sm font-medium tracking-tight">{position}</h4>
                 </div>
-                <time class="text-xs font-light opacity-55 min-w-25.5 md:text-right">{years}</time>
+                <time class="font-inconsolata text-sm opacity-65 tracking-tighter min-w-25.5 md:text-right">
+                  {years}
+                </time>
               </header>
 
-              <footer class="text-xs font-light font-inconsolata text-[rgb(var(--dark),0.85)] ">
+              <footer class="text-sm font-inconsolata tracking-tight text-[rgb(var(--dark),0.75)] ">
                 {
                   highlights.map((h) => {
                     return (
