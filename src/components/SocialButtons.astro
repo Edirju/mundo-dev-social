@@ -1,0 +1,87 @@
+---
+import Github from "#assets/icons/Github.astro";
+import Linkedin from "#assets/icons/Linkedin.astro";
+import Bluesky from "#assets/icons/Bluesky.astro";
+import Instagram from "#assets/icons/Instagram.astro";
+import Threads from "#assets/icons/Threads.astro";
+import TwitterX from "#assets/icons/TwitterX.astro";
+import Mail from "#assets/icons/Mail.astro";
+import Info from "#assets/icons/Info.astro";
+
+import { basics } from "#data/info.json";
+const { profiles, email } = basics;
+const SOCIAL_ICONS: Record<string, any> = {
+  Github,
+  Linkedin,
+  Bluesky,
+  Instagram,
+  Threads,
+  TwitterX,
+};
+---
+
+<section
+  class="flex flex-col flex-1 gap-6 md:gap-8 text-[rgb(var(--color),0.85)]"
+>
+  <h3
+    class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+  >
+    <Info />
+    <span>|</span> Contacto:
+  </h3>
+
+  <ul
+    class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6 p-4 [&:has(a:hover)>a:not(:hover)]:rotate-12 transition-all duration-500"
+  >
+    {
+      profiles.map(({ network, url }) => {
+        const Icon = SOCIAL_ICONS[network];
+        if (!Icon) return null;
+        return (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Ir a mi ${network}`}
+            title={`Ir a mí ${network}`}
+            class="border group aspect-square cursor-pointer rounded-3xl bg-[rgb(var(--light),0.15)] dark:bg-[rgb(var(--dark),0.15)] backdrop-blur-2xl p-4 transition-all duration-300 ease-out hover:bg-secondary-500 hover:text-[rgb(var(--light))] hover:rotate-0 flex flex-col items-center justify-center shadow-[0_0_8px_rgb(var(--color),0.08)] hover:shadow-[0_0_24px_8px_rgb(var(--color),0.15)] border-[rgb(var(--color),0.05)] "
+          >
+            <div class="[&>svg]:size-16 transition-all duration-300 group-hover:hidden">
+              <Icon />
+            </div>
+            <div class="hidden text-xl font-bold font-geist text-center tracking-tighter group-hover:flex animate-in fade-in zoom-in duration-200 ">
+              <span>{network}</span>
+            </div>
+
+            <span class="mt-2 text-[10px] uppercase tracking-widest text-stone-400 group-hover:hidden">
+              {network}
+            </span>
+          </a>
+        );
+      })
+    }
+    {
+      email && (
+        <a
+          href={`mailto:${email}`}
+          target="_blank"
+          rel="noreferrer noopener"
+          title={`Enviar un correo a ${email}`}
+          aria-label={`Enviar un correo a ${email}`}
+          class="border group aspect-square cursor-pointer rounded-3xl bg-[rgb(var(--light),0.15)] dark:bg-[rgb(var(--dark),0.15)] backdrop-blur-2xl p-4 transition-all duration-300 ease-out hover:bg-secondary-500 hover:text-[rgb(var(--light))] hover:rotate-0 flex flex-col items-center justify-center shadow-[0_0_8px_rgb(var(--color),0.08)] hover:shadow-[0_0_24px_8px_rgb(var(--color),0.15)] border-[rgb(var(--color),0.05)]"
+        >
+          <div class="[&>svg]:size-16 transition-all duration-300 group-hover:hidden">
+            <Mail />
+          </div>
+          <div class="hidden text-xl font-bold font-geist text-center tracking-tighter group-hover:flex animate-in fade-in zoom-in duration-200 ">
+            <span>Email</span>
+          </div>
+
+          <span class="mt-2 text-[10px] uppercase tracking-widest text-stone-400 group-hover:hidden">
+            Email
+          </span>
+        </a>
+      )
+    }
+  </ul>
+</section>

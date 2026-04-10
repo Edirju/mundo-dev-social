@@ -5,6 +5,7 @@ import HeroFeature from "#pods/heros/hero-feature.astro";
 import PostFeature from "#pods/post-collection/post-feature.pod.astro";
 import SkillsCollection from "#pods/sliders/skills-collection.astro";
 import ProjectsFeatures from "#pods/projects/project-features.astro";
+import SocialButtons from "#components/SocialButtons.astro";
 
 import { basics } from "#data/info.json";
 const { name, label } = basics;
@@ -25,6 +26,10 @@ const { name, label } = basics;
   
   <Section>
     <ProjectsFeatures />
+  </Section>
+
+  <Section>
+    <SocialButtons />
   </Section>
   
 </Layout>
