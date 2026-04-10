@@ -52,7 +52,7 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendi
 ![Alt text](./full/or/relative/path/of/image)
 ```
 
-### Output
+### Resultado:
 
 ![blog placeholder](../../assets/blog-placeholder-about.jpg)
 
@@ -73,7 +73,7 @@ El elemento `blockquote` representa contenido citado de otra fuente, opcionalmen
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 ```
 
-#### Output
+#### Resultado:
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
 > **Note** that you can use _Markdown syntax_ within a blockquote.
@@ -87,7 +87,7 @@ El elemento `blockquote` representa contenido citado de otra fuente, opcionalmen
 > — <cite>Rob Pike[^1]</cite>
 ```
 
-#### Output
+#### Resultado:
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
 > — <cite>Rob Pike[^1]</cite>
@@ -115,7 +115,7 @@ Ejemplo:
 | React | Frontend | Media |
 ```
 
-### Output
+### Resultado:
 
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
@@ -149,7 +149,7 @@ Podemos usar *tres comillas invertidas* (backticks) ` ``` ` en una nueva línea,
 ```
 ````
 
-### Output
+### Resultado:
 
 ```html
 <!doctype html>
@@ -176,7 +176,7 @@ Podemos usar *tres comillas invertidas* (backticks) ` ``` ` en una nueva línea,
 3. Third item
 ```
 
-#### Output
+#### Resultado:
 
 1. First item
 2. Second item
@@ -192,7 +192,7 @@ Podemos usar *tres comillas invertidas* (backticks) ` ``` ` en una nueva línea,
 - And another item
 ```
 
-#### Output
+#### Resultado:
 
 - List item
 - Another item
@@ -212,7 +212,7 @@ Podemos usar *tres comillas invertidas* (backticks) ` ``` ` en una nueva línea,
   - Cheese
 ```
 
-#### Output
+#### Resultado:
 
 - Fruit
   - Apple
@@ -234,7 +234,7 @@ Perfectas para Readmes, gestión de proyectos o los famosos `Checklists` de GitH
 - [ ] List item
 ```
 
-#### Output
+#### Resultado:
 
 - [ ] Aprender Markdown
 - [x] Aprender Astro
@@ -258,7 +258,7 @@ Este elemento se utiliza para marcar abreviaturas o acrónimos. Su función prin
 
 El atributo `title` contiene el texto completo. **Al renderizarse**, el navegador suele mostrar el acrónimo con un subrayado punteado; al posicionar el ratón encima, aparece un *"tooltip"* con el nombre completo (en este caso, el significado de las siglas GIF).
 
-#### Output
+#### Resultado:
 
 <abbr title="Graphics Interchange Format">GIF</abbr> es un formato de imagen de mapa de bits.
 
@@ -274,7 +274,7 @@ H<sub>2</sub>O
 
 Es el estándar para representar fórmulas químicas. En el ejemplo, el número 2 baja de nivel respecto a la H y la O, indicando la cantidad de átomos de hidrógeno en la molécula de agua.
 
-#### Output
+#### Resultado:
 
 H<sub>2</sub>O
 
@@ -290,7 +290,7 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
 Se utiliza principalmente para exponentes matemáticos, notas al pie de página o indicadores ordinales. Aquí, las letras n se elevan para representar una potencia en una ecuación.
 
-#### Output
+#### Resultado:
 
 X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
@@ -306,7 +306,7 @@ Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
 
 Semánticamente, le indica al navegador y a los lectores de pantalla que ese texto es una tecla física. Visualmente, muchos navegadores le aplican una fuente monoespaciada (como la de una terminal) o un borde que simula la forma de una tecla.
 
-#### Output
+#### Resultado:
 
 Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> para terminar la sesión.
 
@@ -322,6 +322,6 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 Es el equivalente digital a usar un marcador fluorescente. A diferencia de la negrita (que denota importancia), <mark> se usa para captar la atención del lector sobre una palabra específica dentro de una cita o párrafo. Por defecto, los navegadores lo muestran con un fondo amarillo.
 
-#### Output
+#### Resultado:
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
