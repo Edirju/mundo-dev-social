@@ -210,6 +210,103 @@ import HeaderLink from "./HeaderLink.astro";
   </div>
 </header>
 
+<style is:global>
+  /* View Transitions del tema - named "theme-transition" para no chocar con Astro */
+  ::view-transition-group(root) {
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  ::view-transition-new(root) {
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="40" cy="0" r="18" fill="white" filter="url(%23blur)"/></svg>')
+      top right / 0 no-repeat;
+    mask-origin: content-box;
+    animation: scale-theme 1s;
+    animation-fill-mode: both;
+    transform-origin: top right;
+  }
+  ::view-transition-old(root),
+  .dark::view-transition-old(root) {
+    animation: scale-theme 1s;
+    animation-fill-mode: both;
+    transform-origin: top right;
+    z-index: -1;
+  }
+  @keyframes scale-theme {
+    to {
+      mask-size: 350vmax;
+    }
+  }
+
+  /* Deshabilitar si el usuario prefiere reducir movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(root),
+    ::view-transition-new(root),
+    ::view-transition-old(root) {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  const initMenuToggle = () => {
+    const btn = document.querySelector(
+      '[data-collapse-toggle="navbar-default"]',
+    );
+    const menu = document.getElementById("navbar-default");
+
+    if (!btn || !menu) return;
+
+    const toggleHandler = () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      btn.classList.toggle("open");
+      menu.classList.toggle("grid-rows-[0fr]");
+      menu.classList.toggle("grid-rows-[1fr]");
+    };
+
+    (btn as HTMLElement).onclick = toggleHandler;
+  };
+
+  initMenuToggle();
+  document.addEventListener("astro:after-swap", initMenuToggle);
+
+  const initThemeToggle = () => {
+    const button = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+
+    // Aplica el tema guardado al iniciar
+    const storedTheme =
+      localStorage.getItem("theme") ??
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+    html.classList.toggle("dark", storedTheme === "dark");
+
+    const switchTheme = () => {
+      html.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        html.classList.contains("dark") ? "dark" : "light",
+      );
+    };
+
+    const handleThemeToggle = () => {
+      // Si el navegador no soporta View Transitions, cambia directamente
+      if (!document.startViewTransition) {
+        switchTheme();
+        return;
+      }
+      // Con View Transitions — efecto desde top right donde está el botón
+      document.startViewTransition(switchTheme);
+    };
+
+    button?.addEventListener("click", handleThemeToggle);
+  };
+
+  initThemeToggle();
+  document.addEventListener("astro:after-swap", initThemeToggle);
+</script>
+
+<!-- 
 <script>
   const initMenuToggle = () => {
     const btn = document.querySelector(
@@ -260,3 +357,5 @@ import HeaderLink from "./HeaderLink.astro";
   initThemeToggle();
   document.addEventListener("astro:after-swap", initThemeToggle);
 </script>
+
+-->
