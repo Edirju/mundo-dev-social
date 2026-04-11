@@ -1,16 +1,101 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'Obsidian: Guía rápida'
+description: 'Obsidian es una herramienta increíble para construir lo que muchos llaman un "Segundo Cerebro". Es una aplicación basada en archivos Markdown locales, te da control total sobre tu información.'
+pubDate: 'Apr 11 2026'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
+**¡Hola!** *Obsidian* es una herramienta increíble para construir lo que muchos llaman un "Segundo Cerebro". Al ser una aplicación basada en archivos Markdown locales, te da control total sobre tu información.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Aquí tienes una guía estructurada, diseñada con un enfoque práctico y fácil de digerir.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+---
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+## 🧠 Obsidian desde Cero: Construye tu Segundo Cerebro
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+**Obsidian** no es solo una app de notas; *es una base de conocimientos vinculada*. A diferencia de otras herramientas, tus notas viven en tu computadora, no en la nube de alguien más. Vamos a dominarla paso a paso.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+---
+
+### 1. El Primer Paso: Crear tu "Bóveda" (Vault)
+
+Al abrir Obsidian por primera vez, te pedirá crear una Vault. Piensa en ella como una carpeta inteligente en tu disco duro donde se guardará todo.
+
+- **Tip Práctico:** Crea una carpeta llamada "Mi Cerebro Digital" en una ubicación segura.
+- **Por qué importa:** Obsidian simplemente lee archivos .md (Markdown). Si algún día decides dejar de usar la app, tus notas seguirán siendo legibles en cualquier editor de texto.
+
+---
+
+### 2. Dominando el lenguaje: Markdown
+
+Obsidian utiliza **Markdown**, un sistema sencillo para dar formato sin despegar los dedos del teclado. Aquí tienes los comandos esenciales:
+
+```markdown
+  # Titulo 1
+  ## Titulo 2
+  **Texto en negrita**
+  *Texto en cursiva*
+  - Lista de puntos
+  1. Lista ordenada
+```
+
+**Ejemplo práctico:** Intenta escribir el resumen de un libro usando solo estos comandos. Verás que es mucho más rápido que usar un ratón para buscar botones de formato.
+
+---
+
+### 3. La Magia de los Enlaces Internos `[[ ]]`
+
+Esta es la función estrella. En lugar de organizar todo en carpetas rígidas, Obsidian te permite conectar ideas.
+
+Si escribes `[[Nombre de la nota]]`, crearás un enlace automático. Si la nota no existe, Obsidian la creará por ti al hacer clic.
+
+- Ejemplo: Estás escribiendo sobre "Recetas" y mencionas "Salsa Pesto". Si escribes `[[Salsa Pesto]]`, habrás creado un puente entre ambas ideas. Al ver el **Gráfico**, verás cómo se conectan visualmente.
+
+---
+
+### 4. Organización: ¿Carpetas o Etiquetas?
+
+No te satures creando cientos de carpetas al inicio. El flujo recomendado es:
+
+1. **Carpetas:** Úsalas solo para grandes categorías (ej. `01_Proyectos`, `02_Recursos`, `03_Archivo`).
+2. **Etiquetas (#):** Úsalas para estados o tipos de notas (ej. `#borrador`, `#idea`, `#urgente`).
+3. **MOCs (Mapas de Contenido):** Una nota que funciona como índice para otras notas.
+
+---
+
+### 5. Potenciando la herramienta con Plugins
+
+Obsidian es minimalista por fuera, pero una bestia por dentro gracias a sus plugins. Te recomiendo activar estos dos para empezar:
+
+- **Daily Notes (Core):** Crea una nota automática con la fecha de hoy. Ideal para bitácoras de trabajo o diario personal.
+- **Canvas:** Te permite organizar tus notas de forma visual en un lienzo infinito, conectándolas con flechas. Es perfecto para planificar proyectos complejos o estudiar temas densos.
+
+---
+
+### 6. Tu primer flujo de trabajo (Workflow)
+
+Para que no te sientas perdido, intenta este ejercicio mañana mismo:
+
+1. Abre tu **Nota Diaria**.
+2. Escribe 3 tareas pendientes usando `- [ ] Tarea`.
+3. Si surge una idea nueva sobre un tema (ej. "Aprender cocina tailandesa"), escribe `[[Cocina Tailandesa]]` y sigue trabajando.
+4. Al final del día, haz clic en ese enlace y anota lo que descubriste.
+
+```markdown
+- [ ] Tarea 1
+- [ ] Tarea 2
+- [ ] Tarea 3
+```
+
+#### Ejemplo:
+
+- [ ] Tarea 1
+- [ ] Tarea 2
+- [ ] Tarea 3
+
+---
+
+### Conclusión
+
+Obsidian brilla cuando dejas de intentar que sea perfecta y empiezas a usarla como un depósito de pensamientos. No te preocupes por el orden al principio; las conexiones aparecerán solas a medida que escribas.
+
+#### *¿Qué es lo primero que vas a documentar en tu nueva bóveda?*
