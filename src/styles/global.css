@@ -416,6 +416,7 @@ h6 {
 		line-height: 1.5;
 		border-collapse: collapse;
 		table-layout: auto;
+		margin-bottom: 1rem;
 		th, td {
 			border: 1px solid rgb(var(--color), 0.15);
 			padding-inline: 4px;
@@ -435,13 +436,14 @@ h6 {
 	}
 
 	code {
+		@apply bg-primary-900 text-[rgb(var(--light))] dark:text-[rgb(var(--dark))] ;
 		font-family: var(--font-inconsolata);
 		font-weight: 300;
 		padding: 2px 6px;		
-		border-radius: 4px;
-		letter-spacing: 0.05em;
-		background-color: var(--color-gray-900);
-		color: var(--color-white);
+		border-radius: 6px;
+		letter-spacing: -0.05em;
+		/* background-color: var(--color-gray-100); */
+		/* color: var(--color-white); */
 	}
 
 	pre {
@@ -450,7 +452,7 @@ h6 {
 		border-radius: 8px;
 		line-height: 1.5;
 		font-weight: 300;
-		margin-bottom: 1rem;
+		margin: 1rem;
 	}
 
 	pre>code {
@@ -471,7 +473,7 @@ h6 {
 	}
 
 	hr {
-		border-top: 1px solid rgb(var(--color), 0.35);
+		border-top: 1px solid rgb(var(--color), 0.15);
 		margin-block: 1rem;
 	}
 
@@ -483,10 +485,28 @@ h6 {
 
 	ul {
 		margin: 0;
-		padding: 0 0 0 16px;
+		padding: 0 0 16px 16px;
 		list-style-type: disc;
 		list-style-position: inside;
-		line-height: 1.5;		
+		line-height: 1.5;
+		&.checklist {
+			margin: 0;
+			padding: 0 0 1rem 1rem;
+			list-style: none;
+			line-height: 1.5;
+		}
+		&.checklist li {
+			position: relative;
+			padding-left: 1.5rem;
+		}
+		&.checklist li::before {
+			content: '☐';
+			position: absolute;
+			left: 0;
+		}
+		&.checklist li.checked:before {
+			content: "☑";
+		}
 	}
 
 	ol {
