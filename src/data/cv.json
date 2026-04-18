@@ -472,12 +472,12 @@
   ],
   "projects": [
     {
-      "name": "Spotify Clone",
+      "name": "Music Clone Pro",
       "isActive": true,
-      "description": "Clone en HTML, CSS y JS con función básica de reproducción de audio.",
-      "highlights": ["Astrojs", "Svelte", "React", "Tailwindcss"],
-      "url": "https://spotify-clone-project-beta.vercel.app/",
-      "github": "https://github.com/Edirju/spotify-clone"
+      "description": "Clone (Spotify) en HTML, CSS y JS con función básica de reproducción de audio.",
+      "highlights": ["Astro", "Supabase", "Nanostores" ,"Typescript", "Tailwindcss"],
+      "url": "https://clone-music-pro.vercel.app/",
+      "github": "https://github.com/Edirju/clone-music"
     },
     {
       "name": "Reproductor de Música",
