@@ -5,50 +5,90 @@ const { theme = {} } = info;
 const { isDark = false } = theme;
 ---
 
-<div
-  class="hidden sm:block border border-[rgb(var(--color),0.15)] rounded-xl px-6 py-2 absolute left-6 bottom-6 bg-[rgb(var(--light),0.14)] backdrop-blur-xl shadow-[0_4px_30px_rgb(0,0,0,0.15)]"
+<section
+  class:list={[
+    "hidden absolute bottom-6 left-6 border rounded-xl backdrop-blur-2xl sm:flex flex-col gap-3 overflow-hidden w-full max-w-75 shadow-[0_8px_40px_rgb(0_0_0_/0.15),0_2px_8px_rgb(0_0_0/0.08)] bg-linear-330 ",
+    {
+      "text-[rgb(var(--dark),0.85)] border-secondary-500/10 from-primary-300/25 to-primary-50/25 ":
+        !isDark,
+      "text-[rgb(var(--light),0.85)] border-tertiary-300/25 from-black/25 to-primary-800/50 ": isDark,
+    },
+  ]}
 >
-  <h1 class="font-inter-tight font-bold text-[rgb(var(--color),0.85)] mb-1">
-    <a href="/projects" class="flex items-center gap-2 text-sm uppercase">
-      <span
-        class:list={[
-          "[&>svg]:size-5",
-          { "text-amber-500": !isDark, "text-cyan-500": isDark },
-        ]}
-      >
-        <Info />
-      </span>
+  <header
+    class:list={[
+      "border-b shrink-0 flex items-center gap-3 w-full px-6 py-4",
+      {
+        "border-tertiary-300/25": isDark,
+        "border-secondary-500/25": !isDark,
+      },
+    ]}
+  >
+    <div 
+      class:list={[
+        "flex-1 h-px bg-linear-90 ",
+        {
+          "from-transparent to-tertiary-300": isDark,
+          "from-transparent to-secondary-500": !isDark,
+        }
+      ]} 
+    />
+    <h1 
+      class:list={[
+        "flex items-center gap-1 text-sm uppercase font-black tracking-widest bg-clip-text text-transparent bg-linear-270 [&>svg]:size-4 ",
+        {
+          "from-tertiary-300 to-tertiary-200 [&>svg]:text-tertiary-300": isDark,
+          "from-secondary-500 to-secondary-600 [&>svg]:text-secondary-500": !isDark,
+        }
+      ]}
+    >
+      <Info />
+      <span class:list={[]}> Proyecto </span>
+    </h1>
+    <div 
+      class:list={[
+        "flex-1 h-px bg-linear-90 ",
+        {
+          "from-tertiary-300 to-transparent": isDark,
+          "from-secondary-500 to-transparent": !isDark,
+        }
+      ]} 
+    />
+  </header>
 
-      <div
-        class:list={[
-          "tracking-tight inline-block bg-clip-text text-transparent bg-linear-to-r text-shadow-[0_0_8px_rgb(var(--color),0.25)]",
-          {
-            "from-amber-500 to-amber-950": !isDark,
-            "from-cyan-500 to-cyan-800": isDark,
-          },
-        ]}
-      >
-        Ver+ Proyectos
-      </div>
+  <footer 
+    class:list={[
+      "flex flex-col gap-2 px-6 py-2",
+      {
+        "": isDark,
+        "": !isDark
+      }
+    ]}
+  >
+    <h2 
+      class:list={[
+        "text-xs font-semibold uppercase tracking-tight text-center ",
+        {
+          "text-tertiary-300/85 text-shadow-[0_0_8px_rgb(var(--light),0.35)]": isDark,
+          "text-secondary-500/85 text-shadow-[0_0_8px_rgb(var(--dark),0.25)]": !isDark,
+        }
+      ]}
+    >
+      # {info.number} - {info.title}
+    </h2>
+    <a 
+      href="/projects" 
+      class:list={[
+        "text-xs capitalize text-center font-inconsolata tracking-tighter ",
+        {
+          "hover:text-tertiary-300 hover:underline hover:underline-offset-2 transition-all duration-300": isDark,
+          "hover:text-secondary-500 hover:underline hover:underline-offset-2 transition-all duration-300": !isDark,
+        }
+      ]}
+    >
+      <span>←</span> volver a 'proyectos'
     </a>
-  </h1>
+  </footer>  
+</section>
 
-  <h2
-    class:list={[
-      isDark ? "text-cyan-400" : "text-amber-600",
-      "text-sm font-light capitalize",
-    ]}
-  >
-    # {info.number} - {info.title}
-  </h2>
 
-  <a
-    href="/projects"
-    class:list={[
-      isDark ? "text-cyan-600" : "text-amber-800",
-      "font-inconsolata text-xs font-light hover:underline hover:underline-offset-2 transition-all duration-300",
-    ]}
-  >
-    ← Regresa a 'Proyectos'.
-  </a>
-</div>
