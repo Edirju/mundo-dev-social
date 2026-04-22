@@ -14,7 +14,7 @@ const readTimeLabel = "min read";
 <a
   href={`/posts/${post.slug}`}
   title={`Ver ${post.title}`}
-  class="border border-[rgb(var(--color),0.03)] dark:border-[rgb(var(--dark),0.15)] group bg-[rgb(var(--light),0.08)] dark:bg-[rgb(var(--dark),0.10)] backdrop-blur-2xl backdrop-saturate-100 rounded-xl p-4 overflow-hidden shadow-[0_0_12px_rgb(var(--color),0.05)] dark:shadow-[0_0_12px_rgb(0_0_0/0.15)] group"
+  class="border border-[rgb(var(--color),0.03)] dark:border-[rgb(var(--dark),0.15)] group bg-[rgb(var(--light),0.08)] dark:bg-[rgb(var(--dark),0.50)] backdrop-blur-2xl backdrop-saturate-100 rounded-xl p-4 overflow-hidden shadow-[8px_8px_24px_rgb(var(--color),0.08),-8px_-8px_24px_rgb(var(--color),0.02)] dark:shadow-[8px_8px_24px_rgb(0,0,0,0.25),-8px_-8px_24px_rgb(0,0,0,0.1)] group"
 >
   <div class="flex flex-col gap-1 h-full">
     <figure
@@ -52,7 +52,9 @@ const readTimeLabel = "min read";
         class="font-inconsolata flex items-center justify-between gap-4 text-xs font-light tracking-wide transition-opacity group-hover:opacity-65"
       >
         <span>{post.readTime} {readTimeLabel}</span>
-        <div class="flex items-center gap-1 [&>svg]:size-4 group-hover:text-red-400">
+        <div
+          class="flex items-center gap-1 [&>svg]:size-4 group-hover:text-red-400"
+        >
           <Heart aria-hidden="true" />
           <span>{6}</span>
         </div>
@@ -60,3 +62,4 @@ const readTimeLabel = "min read";
     </div>
   </div>
 </a>
+
