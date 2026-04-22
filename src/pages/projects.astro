@@ -1,8 +1,8 @@
 ---
 import Layout from "#layouts/Layout.astro";
 import ProjectGlobal from "#pods/projects/project-global.astro";
+import ProjectExtras from "#pods/projects/project-extras.astro";
 import Section from "#components/Section.astro";
-import OrbitSection from "#pods/sliders/OrbitSection.astro";
 import ProjectIntro from "#pods/heros/project-intro.astro";
 
 import { basics } from "#data/info.json";
@@ -15,5 +15,6 @@ const { name, label } = basics;
   </Section>
 
   <ProjectGlobal />
+  <ProjectExtras />
 </Layout>
 
