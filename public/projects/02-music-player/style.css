@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --font-body: 'Raleway', sans-serif;
+  --font-mono: 'Inconsolata', monospace;
+  --bg-dark: #05070a;
+  --neon-one: rgb(0, 242, 255);
+  --neon-two: rgb(0, 98, 255);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: rgb(255, 254, 254);
+  --text-dim: rgb(148, 163, 184);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+
+  background: linear-gradient(-45deg,
+      rgb(5, 7, 10),
+      rgb(15, 23, 42),
+      rgb(30, 27, 75),
+      rgb(5, 7, 10));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  height: 80dvh;
+  padding: 1.5rem;
+  display: flex;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.player-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-right: 20px;
+  border-right: 1px solid var(--glass-border);
+  .album-art {
+    width: 280px;
+    height: 280px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.15);
+    border: 2px solid var(--glass-border);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+  }
+  .song-info {
+    text-align: center;
+
+    #player-song-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #fff, var(--neon-one));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+    }
+
+    #player-song-artist {
+      color: var(--text-dim);
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    .btn-control {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: var(--neon-one);
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 8px var(--neon-one));
+      }
+    }
+    .btn-play-pause {
+      width: 60px;
+      height: 60px;
+      background: var(--neon-one);
+      border-radius: 50%;
+      color: var(--bg-dark);
+      box-shadow: 0 0 20px var(--neon-one);
+      &:hover {
+        color: var(--bg-dark);
+        transform: scale(1.05);
+        box-shadow: 0 0 30px var(--neon-one);
+      }
+    }
+  }
+}
+
+.playlist-section {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 12px 16px;
+  .playlist-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-size: 1.2rem;
+      color: var(--neon-one);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+  #playlist-songs {
+    list-style: none;
+    overflow-y: auto;
+    padding-right: 10px;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--glass-border);
+      border-radius: 10px;
+    }
+    .playlist-song {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid transparent;
+      transition: var(--transition);
+      cursor: pointer;
+      &:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--glass-border);
+        transform: translateX(5px);
+      }
+      &:hover .btn-delete {
+        opacity: 0.7;
+      }
+      &[aria-current="true"] {
+        background: rgba(0, 242, 255, 0.05);
+        border-color: rgba(0, 242, 255, 0.3);
+      }
+      &[aria-current="true"] .song-title {
+        color: var(--neon-one);
+        text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+      }
+      .song-meta-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        .song-title {
+          font-weight: 600;
+          font-size: 0.95rem;
+          transition: var(--transition);
+        }
+        .song-artist {
+          font-size: 0.8rem;
+          color: var(--text-dim);
+        }
+      }
+      .song-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .song-duration {
+          font-size: 0.8rem;
+          color: var(--text-dim);
+          font-variant-numeric: tabular-nums;
+        }
+        .btn-delete {
+          color: #ff4b4b;
+          opacity: 0;
+          transition: var(--transition);
+          background: none;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+    
+  }
+
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: 95vh;
+    overflow-y: auto;
+  }
+  .player-section {
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding-right: 0;
+    padding-bottom: 24px;
+    flex: none;
+  }
+  .album-art {
+    width: 180px;
+    height: 180px;
+  }
+}

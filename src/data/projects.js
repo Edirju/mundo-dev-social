@@ -23,6 +23,9 @@ export const PROJECTS = [
       "RequestAnimationFrame",
       "Sprites",
     ],
+    theme: {
+      isDark: true,
+    },
     youtube: "#",
   },
   {
@@ -221,5 +224,5 @@ export const PROJECTS = [
   //     isDark: false,
   //   },
   //   youtube: "https://www.youtube.com/watch?v=HvoiF1MCPGs",
-  // },  
+  // },
 ];
