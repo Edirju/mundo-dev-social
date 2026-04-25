@@ -1,0 +1,92 @@
+---
+import Section from "#components/Section.astro";
+import Github from "#assets/icons/Github.astro";
+import Linkedin from "#assets/icons/Linkedin.astro";
+import Bluesky from "#assets/icons/Bluesky.astro";
+import Instagram from "#assets/icons/Instagram.astro";
+import Threads from "#assets/icons/Threads.astro";
+import TwitterX from "#assets/icons/TwitterX.astro";
+import Mail from "#assets/icons/Mail.astro";
+import Info from "#assets/icons/Info.astro";
+
+import { basics } from "#data/info.json";
+const { profiles, email } = basics;
+const SOCIAL_ICONS: Record<string, any> = {
+  Github,
+  Linkedin,
+  Bluesky,
+  Instagram,
+  Threads,
+  TwitterX,
+};
+---
+
+<!-- flex flex-wrap gap-6 items-center justify-center border -->
+<Section>
+  <section
+    class="flex flex-col flex-1 gap-6 md:gap-8 text-[rgb(var(--color),0.85)] pt-6 border-t-2 border-dotted border-[rgb(var(--color),0.10)] mb-0"
+  >
+    <header class="">
+      <h3
+        class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+      >
+        <Info />
+        <span>|</span> Social Media:
+      </h3>
+    </header>
+
+    <ul
+      class="flex gap-6 flex-wrap p-4 justify-center items-center [&:has(a:hover)>a:not(:hover)]:rotate-12 transition-all duration-500"
+    >
+      {
+        profiles.map(({ network, url }) => {
+          const Icon = SOCIAL_ICONS[network];
+          if (!Icon) return null;
+          return (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ir a ${network}`}
+              title={`Ir a ${network}`}
+              class="group aspect-square size-30 rounded-2xl bg-[rgb(var(--light),0.15)] dark:bg-[rgb(var(--dark),0.55)] backdrop-blur-2xl p-4 flex flex-col items-center justify-center border border-[rgb(var(--color),0.05)] shadow-[6px_6px_18px_rgb(var(--color),0.08),-6px_-6px_18px_rgb(var(--color),0.02)] dark:shadow-[6px_6px_18px_rgb(0,0,0,0.25),-6px_-6px_18px_rgb(0,0,0,0.1)] hover:shadow-[0_0_18px_6px_rgb(var(--color),0.15)] dark:hover:shadow-[0_0_18px_6px_rgb(36,168,207,0.25)] transition-all duration-300 ease-out hover:bg-secondary-500/85 hover:text-[rgb(var(--light))] hover:rotate-0"
+            >
+              <div class="[&>svg]:size-10 group-hover:hidden ">
+                <Icon />
+              </div>
+              <div class="hidden group-hover:flex text-base tracking-tight font-black font-geist animate-fade-in duration-300 text-shadow-[0_0_8px_rgb(0,0,0,0.25)] ">
+                <span>{network}</span>
+              </div>
+              <span class="group-hover:hidden text-[9px] uppercase tracking-widest mt-2">
+                {network}
+              </span>
+            </a>
+          );
+        })
+      }
+
+      {
+        email && (
+          <a
+            href={`mailto:${email}`}
+            target="_blank"
+            rel="noreferrer noopener"
+            title={`Enviar un correo a ${email}`}
+            aria-label={`Enviar un correo a ${email}`}
+            class="group aspect-square size-30 rounded-2xl bg-[rgb(var(--light),0.15)] dark:bg-[rgb(var(--dark),0.55)] backdrop-blur-2xl p-4 flex flex-col items-center justify-center border border-[rgb(var(--color),0.05)] shadow-[6px_6px_18px_rgb(var(--color),0.08),-6px_-6px_18px_rgb(var(--color),0.02)] dark:shadow-[6px_6px_18px_rgb(0,0,0,0.25),-6px_-6px_18px_rgb(0,0,0,0.1)] hover:shadow-[0_0_18px_6px_rgb(var(--color),0.15)] dark:hover:shadow-[0_0_18px_6px_rgb(36,168,207,0.25)] transition-all duration-300 ease-out hover:bg-secondary-500/85 hover:text-[rgb(var(--light))] hover:rotate-0"
+          >
+            <div class="[&>svg]:size-10 group-hover:hidden ">
+              <Mail />
+            </div>
+            <div class="hidden group-hover:flex text-base tracking-tight font-black font-geist animate-fade-in zoom-in duration-300 text-shadow-[0_0_8px_rgb(0,0,0,0.25)] ">
+              <span>Correo</span>
+            </div>
+            <span class="group-hover:hidden text-[9px] uppercase tracking-widest mt-2">
+              Correo
+            </span>
+          </a>
+        )
+      }
+    </ul>
+  </section>
+</Section>
