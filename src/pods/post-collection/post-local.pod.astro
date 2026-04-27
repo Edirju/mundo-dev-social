@@ -1,6 +1,7 @@
 ---
 import Section from "#components/Section.astro";
 import Spreadsheet from "#assets/icons/Spreadsheet.astro";
+import News from "#assets/icons/News.astro";
 import Heart from "#assets/icons/Heart.astro";
 
 import FormattedDate from "#components/FormattedDate.astro";
@@ -14,11 +15,15 @@ const posteos = (await getCollection("blog")).sort(
 
 <Section>
   <section class="flex flex-col flex-1 gap-8">
-    <h3
-      class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+    <header
+      class="flex flex-col gap-4 pt-4 border-t-2 border-dotted border-[rgb(var(--color),0.10)]"
     >
-      <Spreadsheet /> Blog <span>|</span> Notas recientes:
-    </h3>
+      <h3
+        class="flex items-center gap-1 text-sm tracking-tight font-normal [&>svg]:size-5 [&>span]:font-extralight [&>span]:opacity-45"
+      >
+        <Spreadsheet /> Blog <span>|</span> Notas recientes:
+      </h3>
+    </header>
 
     <div
       class="grid max-w-175 gap-6 grid-cols-1 justify-center sm:grid-cols-2 md:grid-cols-3"
@@ -69,3 +74,30 @@ const posteos = (await getCollection("blog")).sort(
     </div>
   </section>
 </Section>
+
+<!-- 
+  <div class="flex flex-col gap-4">
+      {
+        posteos.map((post) => (
+          <a
+            href={`/blog/${post.id}/`}
+            title={`Ver artículo: ${post.data.title}`}
+            class="group flex items-center gap-2 justify-between text-[rgb(var(--color),0.85)] md:px-4 "
+          >
+            <div class="flex items-center gap-2 flex-1 min-w-0">
+              <figure class="[&>svg]:size-5 group-hover:text-secondary-500 transition-all shrink-0 ">
+                <News />
+              </figure>
+              <h4 class="font-medium text-sm tracking-tighter truncate opacity-65 group-hover:opacity-100 group-hover:underline group-hover:underline-offset-4 transition-all duration-300 ">
+                {post.data.title}
+              </h4>              
+            </div>
+            <time datetime="" class="font-inconsolata font-light text-xs w-fit tracking-tighter text-[rgb(var(--color),0.65)] group-hover:text-secondary-500/85 transition-all duration-300 ">
+              <FormattedDate date={post.data.pubDate} />
+            </time>
+          </a>
+        ))
+      }
+    </div>
+  
+   -->

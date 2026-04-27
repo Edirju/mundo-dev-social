@@ -1,16 +1,70 @@
 ---
-title: 'Third post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 22 2022'
+title: '🐧 Linux: historia, usos y cómo empezar'
+description: 'Linux es mucho más que “ese sistema operativo raro de programadores”. Aquí tienes información completa, sencilla y con ejemplos para que lo entiendas sin tecnicismos. 🚀'
+pubDate: 'Feb 24 2026'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
+## 📜 Historia en pocas palabras
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+- **Unix (1969):** Creado por Ken Thompson y Dennis Ritchie en Bell Labs, fue el “papá” de Linux.
+- **GNU (1983):** Richard Stallman lanzó el proyecto GNU para crear software libre.
+- **Linux (1991):** Linus Torvalds, estudiante finlandés, publicó su propio núcleo (kernel) y lo compartió en foros. La comunidad lo adoptó y nació el movimiento global.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+> 👉 Hoy *Linux* está en servidores, móviles (Android) y hasta en tu router.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+---
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+## 💡 Usos principales
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+- **Servidores web:** Más del 90% de los servidores de Internet usan *Linux* (Google, Facebook, Amazon).
+- **Smartphones:** Android está basado en Linux.
+- **Supercomputadoras:** Todas las 500 más rápidas del mundo corren Linux.
+- **Uso personal:** Distros como Ubuntu o Linux Mint son amigables para usuarios nuevos.
+
+---
+
+## 🖥️ Instalación (sin miedo)
+
+- Descarga una distribución (ejemplo: Ubuntu).
+- Graba la ISO en un USB con programas como Rufus.
+- Arranca tu PC desde el USB y sigue el asistente.
+
+> 👉 Consejo: puedes probar Linux en “modo live” sin instalar nada, como un demo.
+
+---
+
+## ⌨️ Comandos básicos (terminal friendly)
+
+- `pwd` → muestra en qué carpeta estás.
+- `ls` → lista archivos.
+- `cd carpeta` → cambia de directorio.
+- `cp archivo destino` → copia archivos.
+- `mv archivo destino` → mueve o renombra.
+- `rm archivo` → borra (¡cuidado!).
+- `sudo apt update && sudo apt upgrade` → actualiza tu sistema (en distros basadas en Debian/Ubuntu).
+
+---
+
+## 🔄 Flujos de trabajo actuales (ejemplos prácticos)
+
+- **Desarrollo web:** Usar Linux + Docker para levantar servidores locales.
+- **Estudio:** Instalar VS Code y Git para proyectos escolares.
+- **Oficina:** LibreOffice para documentos, Thunderbird para correos.
+- **Creatividad:** GIMP para edición de imágenes, Inkscape para gráficos vectoriales.
+
+> 👉 Ejemplo: un estudiante instala Ubuntu, usa git para manejar versiones de su código y sincroniza con GitHub. Así aprende y trabaja como un profesional.
+
+---
+
+## 📖 Definiciones rápidas
+
+- **Kernel:** el corazón del sistema, conecta hardware con software.
+- **Distribución (distro):** versión personalizada de Linux (Ubuntu, Fedora, Arch).
+- **Terminal:** la “pantalla negra” donde escribes comandos.
+- **Software libre:** programas que puedes usar, modificar y compartir sin pagar licencias.
+
+---
+
+## 🎯 Conclusión
+
+Linux no es solo para “expertos”: es una herramienta poderosa, gratuita y flexible que puedes usar desde tu PC personal hasta proyectos gigantes en la nube. Si quieres aprender informática de verdad, instalar Linux es como abrir la puerta a un nuevo mundo. 🌍🐧

@@ -346,8 +346,7 @@ h6 {
 		letter-spacing: -0.05em;
 		line-height: 1.25;
 		margin: 0.5rem 0 1rem;
-		color: rgb(var(--color), 0.85);
-		text-wrap: pretty;
+		color: rgb(var(--color), 0.85);		
 	}
 
 	h1 {
